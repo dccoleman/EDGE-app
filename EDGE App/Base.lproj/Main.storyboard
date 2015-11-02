@@ -18,14 +18,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="vG8-VZ-xLe" appends="YES" id="C56-zD-9Ib"/>
+                        </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qhg-y5-VsE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="ImD-nQ-HAl">
+                <tapGestureRecognizer id="vG8-VZ-xLe">
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" id="icP-6n-mZh"/>
+                        <segue destination="BYZ-38-t0r" kind="show" id="2Ld-ML-b21"/>
                     </connections>
-                </swipeGestureRecognizer>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="346" y="-621"/>
         </scene>
@@ -59,7 +63,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="aw3-hF-hvX" secondAttribute="trailing" constant="-20" id="uoT-fP-POq"/>
                         </constraints>
                         <connections>
-                            <outletCollection property="gestureRecognizers" destination="bAN-Db-LyS" appends="YES" id="6po-j9-61k"/>
+                            <outletCollection property="gestureRecognizers" destination="4ev-Cf-IQS" appends="YES" id="3Zd-Mf-G3d"/>
                         </connections>
                     </view>
                     <connections>
@@ -76,13 +80,13 @@
                         <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="vCV-eh-9fw"/>
                     </connections>
                 </searchDisplayController>
-                <swipeGestureRecognizer direction="right" id="bAN-Db-LyS">
+                <swipeGestureRecognizer direction="right" id="4ev-Cf-IQS">
                     <connections>
-                        <segue destination="eLn-fH-Yz3" kind="show" id="kHe-hY-md4"/>
+                        <segue destination="eLn-fH-Yz3" kind="show" id="Tek-VV-FSv"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-361" y="106"/>
+            <point key="canvasLocation" x="-324" y="-243"/>
         </scene>
     </scenes>
 </document>
