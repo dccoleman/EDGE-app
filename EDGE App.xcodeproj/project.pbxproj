@@ -14,6 +14,7 @@
 		DE1F946A1BDFF58D00A0974E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE1F94681BDFF58D00A0974E /* LaunchScreen.storyboard */; };
 		DE1F94751BDFF58D00A0974E /* EDGE_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1F94741BDFF58D00A0974E /* EDGE_AppTests.swift */; };
 		DE1F94801BDFF58D00A0974E /* EDGE_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1F947F1BDFF58D00A0974E /* EDGE_AppUITests.swift */; };
+		DE52C7791BE7CBBE002ACCD8 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE52C7781BE7CBBE002ACCD8 /* Entry.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		DE1F947B1BDFF58D00A0974E /* EDGE AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EDGE AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE1F947F1BDFF58D00A0974E /* EDGE_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EDGE_AppUITests.swift; sourceTree = "<group>"; };
 		DE1F94811BDFF58D00A0974E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE52C7781BE7CBBE002ACCD8 /* Entry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				DE1F94661BDFF58D00A0974E /* Assets.xcassets */,
 				DE1F94681BDFF58D00A0974E /* LaunchScreen.storyboard */,
 				DE1F946B1BDFF58D00A0974E /* Info.plist */,
+				DE52C7781BE7CBBE002ACCD8 /* Entry.swift */,
 			);
 			path = "EDGE App";
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE52C7791BE7CBBE002ACCD8 /* Entry.swift in Sources */,
 				DE1F94621BDFF58D00A0974E /* ViewController.swift in Sources */,
 				DE1F94601BDFF58D00A0974E /* AppDelegate.swift in Sources */,
 			);
@@ -398,6 +402,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "EDGE App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "WPI.EDGE-App";
@@ -410,6 +415,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "EDGE App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "WPI.EDGE-App";
@@ -485,6 +491,7 @@
 				DE1F94861BDFF58D00A0974E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DE1F94871BDFF58D00A0974E /* Build configuration list for PBXNativeTarget "EDGE AppTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +500,7 @@
 				DE1F94891BDFF58D00A0974E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DE1F948A1BDFF58D00A0974E /* Build configuration list for PBXNativeTarget "EDGE AppUITests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +509,7 @@
 				DE1F948C1BDFF58D00A0974E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
