@@ -8,14 +8,12 @@
         <!--Academic-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="4ev-Cf-IQS"/>
                 <viewController id="BYZ-38-t0r" userLabel="Academic" customClass="ViewController" customModule="EDGE_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="Academic">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -44,12 +42,14 @@
                             <outletCollection property="gestureRecognizers" destination="4ev-Cf-IQS" appends="YES" id="3Zd-Mf-G3d"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Academic" id="CAH-KO-j3C" userLabel="Academic"/>
+                    <tabBarItem key="tabBarItem" title="Academic" image="Resources/academic.jpg" id="CAH-KO-j3C" userLabel="Academic"/>
                     <connections>
                         <outlet property="SearchBar" destination="aw3-hF-hvX" id="nz8-di-8lg"/>
                         <outlet property="searchDisplayController" destination="85L-tE-9IJ" id="5yx-sR-Qzw"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="4ev-Cf-IQS"/>
                 <searchDisplayController id="85L-tE-9IJ">
                     <connections>
                         <outlet property="delegate" destination="BYZ-38-t0r" id="QSQ-XG-Xvz"/>
@@ -64,7 +64,6 @@
         <!--Wellness-->
         <scene sceneID="re5-bx-1Ib">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="186-dU-zhM" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="iKa-MO-cbP" userLabel="Wellness" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qfv-ek-eZk"/>
@@ -82,10 +81,13 @@
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="k5U-2R-dgM">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="k5U-2R-dgM">
                                 <rect key="frame" x="0.0" y="72" width="600" height="479"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="PWT-bF-BIB"/>
+                                </constraints>
                             </tableView>
                         </subviews>
                         <animations/>
@@ -100,19 +102,19 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Wellness" id="cOI-Nw-rZU" userLabel="Wellness"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="186-dU-zhM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="304" y="-64"/>
         </scene>
         <!--Social-->
         <scene sceneID="j65-QH-FoP">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="C1b-tx-1gw" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="gA7-RQ-Gyq" userLabel="Social" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oVP-M6-B9o"/>
                         <viewControllerLayoutGuide type="bottom" id="pZg-gs-Nno"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="oAv-UE-wWH">
+                    <view key="view" contentMode="scaleToFill" id="oAv-UE-wWH" userLabel="Social">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -142,6 +144,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Social" id="CTw-dG-3q5" userLabel="Social"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C1b-tx-1gw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="304" y="-724"/>
         </scene>
@@ -166,4 +169,7 @@
             <point key="canvasLocation" x="-516" y="-394"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Resources/academic.jpg" width="16" height="16"/>
+    </resources>
 </document>
