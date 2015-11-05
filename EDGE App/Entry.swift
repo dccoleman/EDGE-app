@@ -8,13 +8,12 @@
 
 import Foundation
 
-struct Entry
-{
-    //whethether Entry is about Socail matters
-    var socail : Bool!
-    //whether Entry is about acedmic matters
-    var acedemic : Bool!
-    //whether Entry is about wellness
+class Entry {
+    //whether Entry is about Social matters
+    var social : Bool!
+    //whether Entry is about Academic matters
+    var academic : Bool!
+    //whether Entry is about Wellness
     var wellness : Bool!
     
     //whether it this entry is for an App
@@ -26,25 +25,47 @@ struct Entry
     //url to the link data, or page !?!
     var url : String?
     
+    //array of other tags, used for search
+    var tags : [String: Bool]
+    
     init(label : String?, url :String? )
     {
-        self.socail = false
+        self.social = false
         self.wellness = false
-        self.acedemic = false
+        self.academic = false
         self.app = false
         self.label = label
         self.url = url
+        self.tags = [String: Bool]()
+
     }
     
     init(soc: Bool, ac: Bool , well: Bool, app: Bool, label : String?, url :String? )
     {
-        socail = soc
+        social = soc
         wellness = well
-        acedemic = ac
+        academic = ac
         self.app = app
         self.label = label
         self.url = url
+        self.tags = [String: Bool]()
+        if(soc) {
+            self.tags.updateValue(true, forKey: "social")
+        }
+        if(ac) {
+            self.tags.updateValue(true, forKey: "academic")
+        }
+        if(well) {
+            self.tags.updateValue(true, forKey: "wellness")
+        }
+
     }
     
+    func search(tag: String) -> Bool {
+        if(self.tags[tag] != nil || self.tags[tag] == false) {
+            return true
+        }
+        return false
+    }
     
 }
