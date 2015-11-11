@@ -22,10 +22,13 @@
                                 <animations/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JKr-lg-KXG">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JKr-lg-KXG">
                                 <rect key="frame" x="0.0" y="72" width="600" height="479"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="Z5j-ak-efy"/>
+                                </constraints>
                             </tableView>
                         </subviews>
                         <animations/>
@@ -35,14 +38,16 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JKr-lg-KXG" secondAttribute="bottom" id="Q0N-Jf-ccx"/>
                             <constraint firstItem="aw3-hF-hvX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="YoR-Ec-U8c"/>
                             <constraint firstItem="JKr-lg-KXG" firstAttribute="top" secondItem="aw3-hF-hvX" secondAttribute="bottom" id="fPK-Kc-Hsa"/>
+                            <constraint firstItem="JKr-lg-KXG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="gR0-pu-MGF"/>
                             <constraint firstItem="aw3-hF-hvX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="lvD-Vp-Ye8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JKr-lg-KXG" secondAttribute="trailing" constant="-20" id="oUX-eW-lLN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aw3-hF-hvX" secondAttribute="trailing" constant="-20" id="tDP-i3-gRo"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="4ev-Cf-IQS" appends="YES" id="3Zd-Mf-G3d"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Academic" image="Resources/academic.jpg" id="CAH-KO-j3C" userLabel="Academic"/>
+                    <tabBarItem key="tabBarItem" title="Academic" image="academic.png" selectedImage="academic.jpg" id="CAH-KO-j3C" userLabel="Academic"/>
                     <connections>
                         <outlet property="SearchBar" destination="aw3-hF-hvX" id="nz8-di-8lg"/>
                         <outlet property="searchDisplayController" destination="85L-tE-9IJ" id="5yx-sR-Qzw"/>
@@ -81,11 +86,12 @@
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="k5U-2R-dgM">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="k5U-2R-dgM">
                                 <rect key="frame" x="0.0" y="72" width="600" height="479"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="600" id="2ic-Bn-xll"/>
                                     <constraint firstAttribute="width" constant="600" id="PWT-bF-BIB"/>
                                 </constraints>
                             </tableView>
@@ -95,12 +101,14 @@
                         <constraints>
                             <constraint firstItem="Dc5-Np-r0V" firstAttribute="top" secondItem="k5U-2R-dgM" secondAttribute="bottom" id="9gy-qL-j6Q"/>
                             <constraint firstItem="U9p-xz-AFC" firstAttribute="leading" secondItem="yuP-aE-vEp" secondAttribute="leadingMargin" constant="-20" id="Fm6-Ws-2bx"/>
+                            <constraint firstItem="k5U-2R-dgM" firstAttribute="leading" secondItem="yuP-aE-vEp" secondAttribute="leadingMargin" constant="-20" id="XsH-nM-n9C"/>
                             <constraint firstAttribute="trailingMargin" secondItem="U9p-xz-AFC" secondAttribute="trailing" constant="-20" id="dc6-3X-OAV"/>
                             <constraint firstItem="U9p-xz-AFC" firstAttribute="top" secondItem="qfv-ek-eZk" secondAttribute="bottom" constant="8" id="mxH-e5-j4d"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="k5U-2R-dgM" secondAttribute="trailing" constant="-20" id="pEE-oE-yZa"/>
                             <constraint firstItem="k5U-2R-dgM" firstAttribute="top" secondItem="U9p-xz-AFC" secondAttribute="bottom" id="yQy-NO-eq6"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Wellness" id="cOI-Nw-rZU" userLabel="Wellness"/>
+                    <tabBarItem key="tabBarItem" title="Wellness" image="wellness.png" selectedImage="wellness.jpg" id="cOI-Nw-rZU" userLabel="Wellness"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="186-dU-zhM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -126,15 +134,20 @@
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LdY-C7-Vi1">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LdY-C7-Vi1">
                                 <rect key="frame" x="0.0" y="72" width="600" height="479"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="ng5-2f-28k"/>
+                                </constraints>
                             </tableView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="LdY-C7-Vi1" secondAttribute="trailing" constant="-20" id="Bdn-k6-0wD"/>
+                            <constraint firstItem="LdY-C7-Vi1" firstAttribute="leading" secondItem="oAv-UE-wWH" secondAttribute="leadingMargin" constant="-20" id="OoN-x7-dxm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ALv-i0-nxm" secondAttribute="trailing" constant="-20" id="oRa-oo-xMn"/>
                             <constraint firstItem="ALv-i0-nxm" firstAttribute="leading" secondItem="oAv-UE-wWH" secondAttribute="leadingMargin" constant="-20" id="req-PP-xZ2"/>
                             <constraint firstItem="ALv-i0-nxm" firstAttribute="top" secondItem="oVP-M6-B9o" secondAttribute="bottom" constant="8" id="t0h-xj-kDb"/>
@@ -142,7 +155,7 @@
                             <constraint firstItem="pZg-gs-Nno" firstAttribute="top" secondItem="LdY-C7-Vi1" secondAttribute="bottom" id="zEV-D0-9Lb"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Social" id="CTw-dG-3q5" userLabel="Social"/>
+                    <tabBarItem key="tabBarItem" title="Social" image="social.png" selectedImage="social.jpg" id="CTw-dG-3q5" userLabel="Social"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C1b-tx-1gw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -170,6 +183,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Resources/academic.jpg" width="16" height="16"/>
+        <image name="academic.jpg" width="30" height="30"/>
+        <image name="academic.png" width="30" height="30"/>
+        <image name="social.jpg" width="30" height="30"/>
+        <image name="social.png" width="30" height="30"/>
+        <image name="wellness.jpg" width="30" height="30"/>
+        <image name="wellness.png" width="30" height="30"/>
     </resources>
 </document>

@@ -14,7 +14,12 @@
 		DE1F946A1BDFF58D00A0974E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE1F94681BDFF58D00A0974E /* LaunchScreen.storyboard */; };
 		DE1F94751BDFF58D00A0974E /* EDGE_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1F94741BDFF58D00A0974E /* EDGE_AppTests.swift */; };
 		DE1F94801BDFF58D00A0974E /* EDGE_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1F947F1BDFF58D00A0974E /* EDGE_AppUITests.swift */; };
-		DE52C7791BE7CBBE002ACCD8 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE52C7781BE7CBBE002ACCD8 /* Entry.swift */; settings = {ASSET_TAGS = (); }; };
+		DE31C0AF1BF120B900FA8AAE /* academic.png in Resources */ = {isa = PBXBuildFile; fileRef = DE31C0AC1BF120B900FA8AAE /* academic.png */; };
+		DE31C0B01BF120B900FA8AAE /* social.png in Resources */ = {isa = PBXBuildFile; fileRef = DE31C0AD1BF120B900FA8AAE /* social.png */; };
+		DE31C0B11BF120B900FA8AAE /* wellness.png in Resources */ = {isa = PBXBuildFile; fileRef = DE31C0AE1BF120B900FA8AAE /* wellness.png */; };
+		DE31C0B31BF1256800FA8AAE /* EDGE Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE31C0B21BF1256800FA8AAE /* EDGE Splash.storyboard */; };
+		DE31C0B51BF1263300FA8AAE /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DE31C0B41BF1263300FA8AAE /* logo.png */; };
+		DE52C7791BE7CBBE002ACCD8 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE52C7781BE7CBBE002ACCD8 /* Entry.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +53,11 @@
 		DE1F947B1BDFF58D00A0974E /* EDGE AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EDGE AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE1F947F1BDFF58D00A0974E /* EDGE_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EDGE_AppUITests.swift; sourceTree = "<group>"; };
 		DE1F94811BDFF58D00A0974E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE31C0AC1BF120B900FA8AAE /* academic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = academic.png; sourceTree = "<group>"; };
+		DE31C0AD1BF120B900FA8AAE /* social.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = social.png; sourceTree = "<group>"; };
+		DE31C0AE1BF120B900FA8AAE /* wellness.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wellness.png; sourceTree = "<group>"; };
+		DE31C0B21BF1256800FA8AAE /* EDGE Splash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "EDGE Splash.storyboard"; sourceTree = "<group>"; };
+		DE31C0B41BF1263300FA8AAE /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		DE52C7781BE7CBBE002ACCD8 /* Entry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +89,8 @@
 		DE1F94531BDFF58D00A0974E = {
 			isa = PBXGroup;
 			children = (
+				DE31C0B21BF1256800FA8AAE /* EDGE Splash.storyboard */,
+				DE31C0B41BF1263300FA8AAE /* logo.png */,
 				DE1F945E1BDFF58D00A0974E /* EDGE App */,
 				DE1F94731BDFF58D00A0974E /* EDGE AppTests */,
 				DE1F947E1BDFF58D00A0974E /* EDGE AppUITests */,
@@ -102,6 +114,9 @@
 				DE1F945F1BDFF58D00A0974E /* AppDelegate.swift */,
 				DE1F94611BDFF58D00A0974E /* ViewController.swift */,
 				DE1F94631BDFF58D00A0974E /* Main.storyboard */,
+				DE31C0AC1BF120B900FA8AAE /* academic.png */,
+				DE31C0AD1BF120B900FA8AAE /* social.png */,
+				DE31C0AE1BF120B900FA8AAE /* wellness.png */,
 				DE1F94661BDFF58D00A0974E /* Assets.xcassets */,
 				DE1F94681BDFF58D00A0974E /* LaunchScreen.storyboard */,
 				DE1F946B1BDFF58D00A0974E /* Info.plist */,
@@ -231,9 +246,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE31C0B01BF120B900FA8AAE /* social.png in Resources */,
 				DE1F946A1BDFF58D00A0974E /* LaunchScreen.storyboard in Resources */,
+				DE31C0AF1BF120B900FA8AAE /* academic.png in Resources */,
+				DE31C0B11BF120B900FA8AAE /* wellness.png in Resources */,
+				DE31C0B51BF1263300FA8AAE /* logo.png in Resources */,
 				DE1F94671BDFF58D00A0974E /* Assets.xcassets in Resources */,
 				DE1F94651BDFF58D00A0974E /* Main.storyboard in Resources */,
+				DE31C0B31BF1256800FA8AAE /* EDGE Splash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
