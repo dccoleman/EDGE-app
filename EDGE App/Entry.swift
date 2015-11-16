@@ -19,10 +19,11 @@ class Entry {
     //whether it this entry is for an App
     var app : Bool!
     
-    //display label to user for eentry
+    //display label to user for entry
     var label : String?
     
     //url to the link data, or page !?!
+    //will be custom url if supported. This may be an issue.
     var url : String?
     
     //array of other tags, used for search
@@ -50,19 +51,19 @@ class Entry {
         self.url = url
         self.tags = [String: Bool]()
         if(soc) {
-            self.tags.updateValue(true, forKey: "social")
+            self.tags["social"] = true
         }
         if(ac) {
-            self.tags.updateValue(true, forKey: "academic")
+            self.tags["academic"] = true
         }
         if(well) {
-            self.tags.updateValue(true, forKey: "wellness")
+            self.tags["wellness"] = true
         }
 
     }
     
     func search(tag: String) -> Bool {
-        if(self.tags[tag] != nil || self.tags[tag] == false) {
+        if(self.tags[tag] != nil || self.tags[tag] == true) {
             return true
         }
         return false
