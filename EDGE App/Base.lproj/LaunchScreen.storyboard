@@ -18,13 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="EDGE" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="Eb1-gs-MuY">
-                                <rect key="frame" x="20" y="357" width="560" height="43"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="J6M-Dj-u5d">
                                 <rect key="frame" x="0.0" y="28" width="601" height="321"/>
                                 <animations/>
@@ -40,7 +33,6 @@
                             <constraint firstItem="J6M-Dj-u5d" firstAttribute="leading" secondItem="xJY-43-BU4" secondAttribute="leadingMargin" constant="-20" id="BOA-OL-eRt"/>
                             <constraint firstItem="J6M-Dj-u5d" firstAttribute="top" secondItem="qdb-Be-33s" secondAttribute="bottom" constant="200" id="hkK-wn-8Ec"/>
                             <constraint firstAttribute="trailingMargin" secondItem="J6M-Dj-u5d" secondAttribute="trailing" constant="-21" id="o7b-TO-jkQ"/>
-                            <constraint firstItem="Eb1-gs-MuY" firstAttribute="top" secondItem="J6M-Dj-u5d" secondAttribute="bottom" constant="8" id="suB-IU-3FI"/>
                         </constraints>
                     </view>
                 </viewController>

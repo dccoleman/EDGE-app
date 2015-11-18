@@ -9,9 +9,9 @@
 import Foundation
 
 class Entry {
-    //whether Entry is about Social matters
+    //whether Entry is about Social
     var social : Bool!
-    //whether Entry is about Academic matters
+    //whether Entry is about Academic
     var academic : Bool!
     //whether Entry is about Wellness
     var wellness : Bool!
@@ -52,12 +52,15 @@ class Entry {
         self.tags = [String: Bool]()
         if(soc) {
             self.tags["social"] = true
+            social = true
         }
         if(ac) {
             self.tags["academic"] = true
+            academic = true
         }
         if(well) {
             self.tags["wellness"] = true
+            wellness = true
         }
 
     }
