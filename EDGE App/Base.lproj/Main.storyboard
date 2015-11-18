@@ -47,7 +47,7 @@
                             <outletCollection property="gestureRecognizers" destination="4ev-Cf-IQS" appends="YES" id="3Zd-Mf-G3d"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Academic" image="academic.png" selectedImage="academic.jpg" id="CAH-KO-j3C" userLabel="Academic"/>
+                    <tabBarItem key="tabBarItem" title="Academic" image="academic2.png" selectedImage="academic.jpg" id="CAH-KO-j3C" userLabel="Academic"/>
                     <connections>
                         <outlet property="SearchBar" destination="aw3-hF-hvX" id="nz8-di-8lg"/>
                         <outlet property="searchDisplayController" destination="85L-tE-9IJ" id="5yx-sR-Qzw"/>
@@ -120,7 +120,7 @@
                             <constraint firstItem="k5U-2R-dgM" firstAttribute="top" secondItem="U9p-xz-AFC" secondAttribute="bottom" id="yQy-NO-eq6"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Wellness" image="wellness.png" selectedImage="wellness.jpg" id="cOI-Nw-rZU" userLabel="Wellness"/>
+                    <tabBarItem key="tabBarItem" title="Wellness" image="wellness2.png" selectedImage="wellness.jpg" id="cOI-Nw-rZU" userLabel="Wellness"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="186-dU-zhM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -167,7 +167,7 @@
                             <constraint firstItem="pZg-gs-Nno" firstAttribute="top" secondItem="LdY-C7-Vi1" secondAttribute="bottom" id="zEV-D0-9Lb"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Social" image="social.png" selectedImage="social.jpg" id="CTw-dG-3q5" userLabel="Social"/>
+                    <tabBarItem key="tabBarItem" title="Social" image="social2.png" selectedImage="social.jpg" id="CTw-dG-3q5" userLabel="Social"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C1b-tx-1gw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -196,10 +196,10 @@
     </scenes>
     <resources>
         <image name="academic.jpg" width="30" height="30"/>
-        <image name="academic.png" width="30" height="30"/>
+        <image name="academic2.png" width="30" height="30"/>
         <image name="social.jpg" width="30" height="30"/>
-        <image name="social.png" width="30" height="30"/>
+        <image name="social2.png" width="30" height="30"/>
         <image name="wellness.jpg" width="30" height="30"/>
-        <image name="wellness.png" width="30" height="30"/>
+        <image name="wellness2.png" width="30" height="30"/>
     </resources>
 </document>
