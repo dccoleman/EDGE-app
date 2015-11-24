@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE1332191C04057700416CCF /* AppsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1332181C04057700416CCF /* AppsViewController.swift */; };
+		DE13321B1C0405D700416CCF /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE13321A1C0405D700416CCF /* SampleData.swift */; };
 		DE1F94601BDFF58D00A0974E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1F945F1BDFF58D00A0974E /* AppDelegate.swift */; };
 		DE1F94621BDFF58D00A0974E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1F94611BDFF58D00A0974E /* ViewController.swift */; };
 		DE1F94651BDFF58D00A0974E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE1F94631BDFF58D00A0974E /* Main.storyboard */; };
@@ -43,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DE1332181C04057700416CCF /* AppsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppsViewController.swift; sourceTree = "<group>"; };
+		DE13321A1C0405D700416CCF /* SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		DE1F945C1BDFF58D00A0974E /* EDGE App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EDGE App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE1F945F1BDFF58D00A0974E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE1F94611BDFF58D00A0974E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 			children = (
 				DE1F945F1BDFF58D00A0974E /* AppDelegate.swift */,
 				DE1F94611BDFF58D00A0974E /* ViewController.swift */,
+				DE1332181C04057700416CCF /* AppsViewController.swift */,
 				DE1F94631BDFF58D00A0974E /* Main.storyboard */,
 				DE31C0AC1BF120B900FA8AAE /* academic.png */,
 				DE31C0AD1BF120B900FA8AAE /* social.png */,
@@ -130,6 +135,7 @@
 				DE889B001BFCFBF600772A70 /* wellness2.png */,
 				DE1F946B1BDFF58D00A0974E /* Info.plist */,
 				DE52C7781BE7CBBE002ACCD8 /* Entry.swift */,
+				DE13321A1C0405D700416CCF /* SampleData.swift */,
 			);
 			path = "EDGE App";
 			sourceTree = "<group>";
@@ -292,6 +298,8 @@
 			files = (
 				DE52C7791BE7CBBE002ACCD8 /* Entry.swift in Sources */,
 				DE1F94621BDFF58D00A0974E /* ViewController.swift in Sources */,
+				DE1332191C04057700416CCF /* AppsViewController.swift in Sources */,
+				DE13321B1C0405D700416CCF /* SampleData.swift in Sources */,
 				DE1F94601BDFF58D00A0974E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

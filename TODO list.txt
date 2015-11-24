@@ -1,0 +1,6 @@
+1) Search Bar in Navigation bar - Devon
+2) App Icon - Ryan
+3) Add to database - Devon
+4) Add screen - Devon
+5) XML files - Ryan
+6) Search Functionality - Devon
