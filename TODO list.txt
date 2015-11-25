@@ -1,8 +1,9 @@
-1) Search Bar in Navigation bar - Devon
+1) Search Bar in Navigation bar - DONE
 2) App Icon - Ryan
-3) Add to database - Devon
-4) Add screen - Devon
+3) Add to internal database - Devon
+4) Add screen - Devon - Button Added
 5) XML files - Ryan
-6) Search Functionality - Devon
-7) Launch app/store page when selected - Ryan
+6) Search Functionality - In Progress
+7) Launch app/store page/go to link when selected - Ryan
 8) Add to server - Ryan
+9) Info Page - Devon - Button Added
