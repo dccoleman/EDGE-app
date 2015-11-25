@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
-        <!--Social-->
+        <!--Apps View Controller-->
         <scene sceneID="DV6-HG-CTX">
             <objects>
                 <tableViewController id="wnW-2G-2hF" customClass="AppsViewController" customModule="EDGE_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -48,9 +48,41 @@
                             <outlet property="delegate" destination="wnW-2G-2hF" id="Bms-Bl-A39"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Social" id="6BH-lE-ZY4"/>
+                    <navigationItem key="navigationItem" id="6BH-lE-ZY4">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="VSe-iV-icC">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" id="LaL-Xa-VEu">
+                                <rect key="frame" x="20" y="11" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                            </button>
+                        </barButtonItem>
+                        <view key="titleView" contentMode="scaleToFill" id="AJK-V8-ACg">
+                            <rect key="frame" x="180" y="5.5" width="240" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Y13-0u-wjv">
+                                    <rect key="frame" x="0.0" y="-6" width="240" height="44"/>
+                                    <animations/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="wnW-2G-2hF" id="MrV-5D-2VI"/>
+                                    </connections>
+                                </searchBar>
+                            </subviews>
+                            <animations/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="Y13-0u-wjv" secondAttribute="trailing" id="NZP-No-MBZ"/>
+                                <constraint firstItem="Y13-0u-wjv" firstAttribute="leading" secondItem="AJK-V8-ACg" secondAttribute="leading" id="PRO-JN-xdD"/>
+                                <constraint firstAttribute="bottom" secondItem="Y13-0u-wjv" secondAttribute="bottom" constant="-5" id="TdJ-uP-0al"/>
+                                <constraint firstItem="Y13-0u-wjv" firstAttribute="top" secondItem="AJK-V8-ACg" secondAttribute="top" constant="-6" id="vNZ-c4-4ia"/>
+                            </constraints>
+                        </view>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="Bo4-CA-p95"/>
+                    </navigationItem>
                     <connections>
-                        <outlet property="searchDisplayController" destination="7vL-fU-iwa" id="Lmm-hT-nY4"/>
+                        <outlet property="searchDisplayController" destination="tYP-oM-cfA" id="949-av-g5n"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AHB-I1-kca" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -62,10 +94,19 @@
                         <outlet property="searchResultsDelegate" destination="wnW-2G-2hF" id="eq0-iw-P66"/>
                     </connections>
                 </searchDisplayController>
+                <searchDisplayController id="tYP-oM-cfA">
+                    <connections>
+                        <outlet property="delegate" destination="wnW-2G-2hF" id="jII-gE-1yd"/>
+                        <outlet property="searchBar" destination="Y13-0u-wjv" id="MKY-4U-l1I"/>
+                        <outlet property="searchContentsController" destination="wnW-2G-2hF" id="G5d-vx-Byc"/>
+                        <outlet property="searchResultsDataSource" destination="wnW-2G-2hF" id="Gzo-up-SBj"/>
+                        <outlet property="searchResultsDelegate" destination="wnW-2G-2hF" id="3kV-hS-daw"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1110" y="-724"/>
         </scene>
-        <!--Wellness-->
+        <!--Apps View Controller-->
         <scene sceneID="JAX-hQ-S1r">
             <objects>
                 <tableViewController id="b2k-mP-FH7" customClass="AppsViewController" customModule="EDGE_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -109,13 +150,45 @@
                             <outlet property="delegate" destination="b2k-mP-FH7" id="U9K-Rs-ket"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Wellness" id="AAr-HB-K9J"/>
+                    <navigationItem key="navigationItem" id="y37-c8-SFF">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="QV0-Ne-8aO">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" id="YBF-BV-6xe">
+                                <rect key="frame" x="20" y="11" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                            </button>
+                        </barButtonItem>
+                        <view key="titleView" contentMode="scaleToFill" id="T5Q-qE-gsp">
+                            <rect key="frame" x="180" y="5.5" width="240" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="tDU-1c-Tla">
+                                    <rect key="frame" x="0.0" y="-6" width="240" height="44"/>
+                                    <animations/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="wnW-2G-2hF" id="ccN-Vc-C9p"/>
+                                    </connections>
+                                </searchBar>
+                            </subviews>
+                            <animations/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="tDU-1c-Tla" firstAttribute="top" secondItem="T5Q-qE-gsp" secondAttribute="top" constant="-6" id="2Yw-95-ap5"/>
+                                <constraint firstAttribute="trailing" secondItem="tDU-1c-Tla" secondAttribute="trailing" id="2ml-BE-LdF"/>
+                                <constraint firstItem="tDU-1c-Tla" firstAttribute="leading" secondItem="T5Q-qE-gsp" secondAttribute="leading" id="7cb-IU-Qnf"/>
+                                <constraint firstAttribute="bottom" secondItem="tDU-1c-Tla" secondAttribute="bottom" constant="-5" id="ZSY-0q-CPI"/>
+                            </constraints>
+                        </view>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="biR-w1-pSO"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j61-uQ-www" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1110" y="-66"/>
         </scene>
-        <!--Academic-->
+        <!--Apps View Controller-->
         <scene sceneID="08i-HA-Kil">
             <objects>
                 <tableViewController id="76K-1z-4N5" customClass="AppsViewController" customModule="EDGE_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -159,7 +232,39 @@
                             <outlet property="delegate" destination="76K-1z-4N5" id="dKL-8H-d20"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Academic" id="7O6-Lf-elF"/>
+                    <navigationItem key="navigationItem" id="I0Z-lJ-COF">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="GeP-jZ-eiP">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" id="SU4-RO-M22">
+                                <rect key="frame" x="20" y="11" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                            </button>
+                        </barButtonItem>
+                        <view key="titleView" contentMode="scaleToFill" id="rvs-24-Pis">
+                            <rect key="frame" x="180" y="5.5" width="240" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="nZN-fT-Xq7">
+                                    <rect key="frame" x="0.0" y="-6" width="240" height="44"/>
+                                    <animations/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="wnW-2G-2hF" id="BAd-yN-tR6"/>
+                                    </connections>
+                                </searchBar>
+                            </subviews>
+                            <animations/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="nZN-fT-Xq7" secondAttribute="bottom" constant="-5" id="4wt-jg-jgf"/>
+                                <constraint firstAttribute="trailing" secondItem="nZN-fT-Xq7" secondAttribute="trailing" id="mSg-7S-iao"/>
+                                <constraint firstItem="nZN-fT-Xq7" firstAttribute="top" secondItem="rvs-24-Pis" secondAttribute="top" constant="-6" id="txc-MN-eyb"/>
+                                <constraint firstItem="nZN-fT-Xq7" firstAttribute="leading" secondItem="rvs-24-Pis" secondAttribute="leading" id="wsZ-PL-sQf"/>
+                            </constraints>
+                        </view>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="r3P-WL-RVj"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cZm-8W-3pt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
