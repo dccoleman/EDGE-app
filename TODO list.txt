@@ -3,7 +3,7 @@
 3) Add to internal database - Devon
 4) Add screen - Devon - Button Added
 5) XML files - Ryan
-6) Search Functionality - In Progress
+6) Search Functionality - 95% (update to check list of tags, no more hashtable)
 7) Launch app/store page/go to link when selected - Ryan
 8) Add to server - Ryan
 9) Info Page - Devon - Button Added
