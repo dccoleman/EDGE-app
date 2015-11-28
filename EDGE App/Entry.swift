@@ -53,7 +53,7 @@ class Entry {
         }
     
     func search(searchString: String) -> Bool {
-        if(tags.count != 0 && !searchString.isEmpty) {
+        if(tags.count != 0) {
             for tag in tags {
                 if((tag.lowercaseString.rangeOfString(searchString.lowercaseString)) != nil) {
                     return true
