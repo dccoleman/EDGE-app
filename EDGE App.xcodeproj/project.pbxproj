@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DE1332191C04057700416CCF /* AppsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1332181C04057700416CCF /* AppsViewController.swift */; };
 		DE13321B1C0405D700416CCF /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE13321A1C0405D700416CCF /* SampleData.swift */; };
 		DE1F94601BDFF58D00A0974E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1F945F1BDFF58D00A0974E /* AppDelegate.swift */; };
 		DE1F94621BDFF58D00A0974E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1F94611BDFF58D00A0974E /* ViewController.swift */; };
@@ -43,7 +42,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DE1332181C04057700416CCF /* AppsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppsViewController.swift; sourceTree = "<group>"; };
 		DE13321A1C0405D700416CCF /* SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		DE1F945C1BDFF58D00A0974E /* EDGE App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EDGE App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE1F945F1BDFF58D00A0974E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -117,7 +115,6 @@
 			children = (
 				DE1F945F1BDFF58D00A0974E /* AppDelegate.swift */,
 				DE1F94611BDFF58D00A0974E /* ViewController.swift */,
-				DE1332181C04057700416CCF /* AppsViewController.swift */,
 				DE94D59D1C0A250000E47C66 /* AcademicViewController.swift */,
 				DE94D59F1C0A264800E47C66 /* SocialViewController.swift */,
 				DE94D5A11C0A26F900E47C66 /* WellnessViewController.swift */,
@@ -290,7 +287,6 @@
 				DE94D5A01C0A264800E47C66 /* SocialViewController.swift in Sources */,
 				DE94D5A21C0A26F900E47C66 /* WellnessViewController.swift in Sources */,
 				DE1F94621BDFF58D00A0974E /* ViewController.swift in Sources */,
-				DE1332191C04057700416CCF /* AppsViewController.swift in Sources */,
 				DE13321B1C0405D700416CCF /* SampleData.swift in Sources */,
 				DE1F94601BDFF58D00A0974E /* AppDelegate.swift in Sources */,
 			);
