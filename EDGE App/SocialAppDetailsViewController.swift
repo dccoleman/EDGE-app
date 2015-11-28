@@ -35,8 +35,8 @@ class SocialAppDetailsViewController: UITableViewController {
     //create a new entry object with the given parameters
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "SaveSocialApp" {
-            var tags = [SocialAppTags.text!]
-            newEntry = Entry(soc: true, ac: false, well: false, app: true, label: (SocialAppName.text!), url: (SocialAppUrlField.text!), tags: tags)
+            print(SocialAppTags.text!)
+            newEntry = Entry(soc: true, ac: false, well: false, app: true, label: (SocialAppName.text!), url: (SocialAppUrlField.text!), tags: (SocialAppTags.text!))
             //HERE is where we push to parse
         }
     }

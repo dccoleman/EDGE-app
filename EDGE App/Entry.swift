@@ -27,7 +27,7 @@ class Entry {
     var url : String?
     
     //array of other tags, used for search
-    var tags : [String]
+    var tags : String?
     
     init(label : String?, url :String? )
     {
@@ -37,11 +37,11 @@ class Entry {
         self.app = false
         self.label = label
         self.url = url
-        self.tags = [String]()
+        self.tags = nil
 
     }
     
-    init(soc: Bool, ac: Bool , well: Bool, app: Bool, label : String?, url :String?, tags : [String])
+    init(soc: Bool, ac: Bool , well: Bool, app: Bool, label : String?, url :String?, tags : String?)
     {
         social = soc
         wellness = well
@@ -53,18 +53,11 @@ class Entry {
         }
     
     func search(searchString: String) -> Bool {
-        if(tags.count != 0) {
-            for tag in tags {
-                if((tag.lowercaseString.rangeOfString(searchString.lowercaseString)) != nil) {
-                    return true
-                }
-            }
-        }
-        return false
+        return (tags?.lowercaseString.rangeOfString(searchString.lowercaseString) != nil)
     }
     
     func addTag(tag : String) {
-        tags.append(tag)
+        tags?.appendContentsOf(tag)
     }
     
 }
