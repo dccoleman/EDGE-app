@@ -110,4 +110,21 @@ class SocialViewController: UITableViewController, UISearchResultsUpdating, UISe
         tableView.reloadData()
     }
     
+    @IBAction func cancelToPlayersViewController(segue:UIStoryboardSegue) {
+    }
+    
+    @IBAction func saveSocialApp(segue:UIStoryboardSegue) {
+        if let SocialAppDetailsViewController = segue.sourceViewController as? SocialAppDetailsViewController {
+            
+            //add the new player to the players array
+            if let entry = SocialAppDetailsViewController.newEntry {
+                social.append(entry)
+                
+                //update the tableView
+                let indexPath = NSIndexPath(forRow: social.count-1, inSection: 0)
+                tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+            }
+        }
+    }
+    
 }
