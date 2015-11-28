@@ -51,5 +51,208 @@
             landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EDGE App/AcademicViewController.swift"
+            timestampString = "470438020.568751"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "AcademicViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EDGE_App.AcademicViewController.init (EDGE_App.AcademicViewController.Type)(style : __C.UITableViewStyle) -&gt; EDGE_App.AcademicViewController"
+                  moduleName = "EDGE App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bacon/Documents/EDGE%20App/EDGE%20App/AcademicViewController.swift"
+                  timestampString = "470438054.94606"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EDGE_App.AcademicViewController.init (EDGE_App.AcademicViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; EDGE_App.AcademicViewController"
+                  moduleName = "EDGE App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bacon/Documents/EDGE%20App/EDGE%20App/AcademicViewController.swift"
+                  timestampString = "470438054.946367"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "57">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EDGE_App.AcademicViewController.init (EDGE_App.AcademicViewController.Type)(coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;EDGE_App.AcademicViewController&gt;"
+                  moduleName = "EDGE App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bacon/Documents/EDGE%20App/EDGE%20App/AcademicViewController.swift"
+                  timestampString = "470438054.946546"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "19">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EDGE App/AcademicViewController.swift"
+            timestampString = "470438047.988539"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "AcademicViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EDGE_App.AcademicViewController.academic.getter : Swift.Array&lt;EDGE_App.Entry&gt;"
+                  moduleName = "EDGE App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bacon/Documents/EDGE%20App/EDGE%20App/AcademicViewController.swift"
+                  timestampString = "470438047.990809"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EDGE_App.AcademicViewController.academic.setter : Swift.Array&lt;EDGE_App.Entry&gt;"
+                  moduleName = "EDGE App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bacon/Documents/EDGE%20App/EDGE%20App/AcademicViewController.swift"
+                  timestampString = "470438047.99123"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EDGE_App.AcademicViewController.academic.materializeForSet : Swift.Array&lt;EDGE_App.Entry&gt;"
+                  moduleName = "EDGE App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bacon/Documents/EDGE%20App/EDGE%20App/AcademicViewController.swift"
+                  timestampString = "470438047.991587"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EDGE_App.AcademicViewController.init (EDGE_App.AcademicViewController.Type)(style : __C.UITableViewStyle) -&gt; EDGE_App.AcademicViewController"
+                  moduleName = "EDGE App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bacon/Documents/EDGE%20App/EDGE%20App/AcademicViewController.swift"
+                  timestampString = "470438047.991799"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EDGE_App.AcademicViewController.init (EDGE_App.AcademicViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; EDGE_App.AcademicViewController"
+                  moduleName = "EDGE App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bacon/Documents/EDGE%20App/EDGE%20App/AcademicViewController.swift"
+                  timestampString = "470438047.991984"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "57">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EDGE_App.AcademicViewController.init (EDGE_App.AcademicViewController.Type)(coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;EDGE_App.AcademicViewController&gt;"
+                  moduleName = "EDGE App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bacon/Documents/EDGE%20App/EDGE%20App/AcademicViewController.swift"
+                  timestampString = "470438047.992182"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "19">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EDGE App/AcademicViewController.swift"
+            timestampString = "470438078.57465"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "AcademicViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EDGE App/AcademicViewController.swift"
+            timestampString = "470438081.342182"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "AcademicViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

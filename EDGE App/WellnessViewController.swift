@@ -1,5 +1,5 @@
 //
-//  AcademicViewController.swift
+//  WellnessViewController
 //  EDGE App
 //
 //  Created by Devon Coleman on 11/23/15.
@@ -8,18 +8,36 @@
 
 import UIKit
 
-class WellnessViewController: UITableViewController {
+class WellnessViewController: UITableViewController, UISearchResultsUpdating, UISearchBarDelegate {
     
     var wellness:[Entry] = wellnessData
+    var filteredWellness = [Entry]()
+    var resultSearchController = UISearchController()
+    var selectedScope = "All"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        self.resultSearchController = ({
+            let controller = UISearchController(searchResultsController: nil)
+            controller.searchResultsUpdater = self
+            controller.dimsBackgroundDuringPresentation = false
+            controller.searchBar.sizeToFit()
+            controller.searchBar.delegate = self
+            
+            self.tableView.tableHeaderView = controller.searchBar
+            
+            return controller
+        })()
         
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.tableView.reloadData()
+    }
+    
+    func filterContentForSearchText(searchText: String) {
+        self.filteredWellness = self.wellness.filter({( newApp: Entry ) -> Bool in
+            let stringMatch = newApp.label!.lowercaseString.rangeOfString(searchText.lowercaseString)
+            return (stringMatch != nil)
+        })
     }
     
     override func didReceiveMemoryWarning() {
@@ -27,72 +45,63 @@ class WellnessViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK: - Table view data source
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "DetailSegue" {
+            let controller = segue.destinationViewController
+            let entry: Entry
+            
+            if let indexPath = tableView.indexPathForCell(sender as! UITableViewCell) {
+                
+                if resultSearchController.active {
+                    entry = filteredWellness[indexPath.row]
+                } else {
+                    entry = wellness[indexPath.row]
+                }
+                
+                controller.title = entry.label
+            }
+            
+            if (self.resultSearchController.active) {
+                self.resultSearchController.active = false
+            }
+        }
+    }
+    
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return wellness.count
+        if (self.resultSearchController.active) {
+            return self.filteredWellness.count
+        } else {
+            return self.wellness.count
+        }
     }
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("WellnessCell", forIndexPath: indexPath)
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("WellnessCell", forIndexPath: indexPath)
         
-        let newApp = wellness[indexPath.row] as Entry
-        cell.textLabel?.text = newApp.label
-        cell.detailTextLabel?.text = newApp.url
+        let entry: Entry
+        if (self.resultSearchController.active) {
+            entry = self.filteredWellness[indexPath.row]
+        } else {
+            entry = self.wellness[indexPath.row]
+        }
+        
+        cell.textLabel!.text = entry.label
+        cell.detailTextLabel!.text = entry.url
         
         return cell
     }
     
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-    // Return false if you do not want the specified item to be editable.
-    return true
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+        filteredWellness.removeAll(keepCapacity: false)
+        filterContentForSearchText(searchController.searchBar.text!)
+        
+        tableView.reloadData()
     }
-    */
-    
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-    if editingStyle == .Delete {
-    // Delete the row from the data source
-    tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-    } else if editingStyle == .Insert {
-    // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }
-    }
-    */
-    
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-    
-    }
-    */
-    
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-    // Return false if you do not want the item to be re-orderable.
-    return true
-    }
-    */
-    
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
-    }
-    */
     
 }

@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
-        <!--Social View Controller-->
+        <!--Social-->
         <scene sceneID="DV6-HG-CTX">
             <objects>
                 <tableViewController id="wnW-2G-2hF" customClass="SocialViewController" customModule="EDGE_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -13,9 +13,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="IiK-mK-UeI">
+                            <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <animations/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="wnW-2G-2hF" id="2Gr-vi-24N"/>
+                            </connections>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SocialCell" textLabel="7Na-9S-hmk" detailTextLabel="Lhm-7K-eYg" style="IBUITableViewCellStyleSubtitle" id="rh6-h2-pYr">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="136" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rh6-h2-pYr" id="J0e-Ok-wN5">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -48,8 +57,7 @@
                             <outlet property="delegate" destination="wnW-2G-2hF" id="Bms-Bl-A39"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="6BH-lE-ZY4">
-                        <nil key="title"/>
+                    <navigationItem key="navigationItem" title="Social" id="6BH-lE-ZY4">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="VSe-iV-icC">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" id="LaL-Xa-VEu">
                                 <rect key="frame" x="20" y="11" width="22" height="22"/>
@@ -57,44 +65,14 @@
                                 <animations/>
                             </button>
                         </barButtonItem>
-                        <view key="titleView" contentMode="scaleToFill" id="AJK-V8-ACg">
-                            <rect key="frame" x="180" y="5.5" width="240" height="33"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <searchBar contentMode="redraw" placeholder="Social" translatesAutoresizingMaskIntoConstraints="NO" id="Y13-0u-wjv">
-                                    <rect key="frame" x="0.0" y="-6" width="240" height="44"/>
-                                    <animations/>
-                                    <textInputTraits key="textInputTraits" autocorrectionType="no"/>
-                                    <connections>
-                                        <outlet property="delegate" destination="wnW-2G-2hF" id="MrV-5D-2VI"/>
-                                    </connections>
-                                </searchBar>
-                            </subviews>
-                            <animations/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstAttribute="trailing" secondItem="Y13-0u-wjv" secondAttribute="trailing" id="NZP-No-MBZ"/>
-                                <constraint firstItem="Y13-0u-wjv" firstAttribute="leading" secondItem="AJK-V8-ACg" secondAttribute="leading" id="PRO-JN-xdD"/>
-                                <constraint firstAttribute="bottom" secondItem="Y13-0u-wjv" secondAttribute="bottom" constant="-5" id="TdJ-uP-0al"/>
-                                <constraint firstItem="Y13-0u-wjv" firstAttribute="top" secondItem="AJK-V8-ACg" secondAttribute="top" constant="-6" id="vNZ-c4-4ia"/>
-                            </constraints>
-                        </view>
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="Bo4-CA-p95"/>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AHB-I1-kca" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="7vL-fU-iwa">
-                    <connections>
-                        <outlet property="delegate" destination="wnW-2G-2hF" id="t5h-sc-Ans"/>
-                        <outlet property="searchContentsController" destination="wnW-2G-2hF" id="ONj-4E-JNq"/>
-                        <outlet property="searchResultsDataSource" destination="wnW-2G-2hF" id="A0T-mi-ZNh"/>
-                        <outlet property="searchResultsDelegate" destination="wnW-2G-2hF" id="eq0-iw-P66"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1110" y="-724"/>
         </scene>
-        <!--Wellness View Controller-->
+        <!--Wellness-->
         <scene sceneID="JAX-hQ-S1r">
             <objects>
                 <tableViewController id="b2k-mP-FH7" customClass="WellnessViewController" customModule="EDGE_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -103,9 +81,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="lgX-kG-UdH">
+                            <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <animations/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="b2k-mP-FH7" id="KWz-a8-REo"/>
+                            </connections>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WellnessCell" textLabel="frk-bB-pQW" detailTextLabel="icZ-V1-sPB" style="IBUITableViewCellStyleSubtitle" id="b5t-je-TpI">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="136" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="b5t-je-TpI" id="JAr-vh-xIP">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -138,8 +125,7 @@
                             <outlet property="delegate" destination="b2k-mP-FH7" id="U9K-Rs-ket"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="y37-c8-SFF">
-                        <nil key="title"/>
+                    <navigationItem key="navigationItem" title="Wellness" id="y37-c8-SFF">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="QV0-Ne-8aO">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" id="YBF-BV-6xe">
                                 <rect key="frame" x="20" y="11" width="22" height="22"/>
@@ -147,36 +133,26 @@
                                 <animations/>
                             </button>
                         </barButtonItem>
-                        <view key="titleView" contentMode="scaleToFill" id="T5Q-qE-gsp">
-                            <rect key="frame" x="180" y="5.5" width="240" height="33"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <searchBar contentMode="redraw" placeholder="Wellness" translatesAutoresizingMaskIntoConstraints="NO" id="tDU-1c-Tla">
-                                    <rect key="frame" x="0.0" y="-6" width="240" height="44"/>
-                                    <animations/>
-                                    <textInputTraits key="textInputTraits" autocorrectionType="no"/>
-                                    <connections>
-                                        <outlet property="delegate" destination="wnW-2G-2hF" id="ccN-Vc-C9p"/>
-                                    </connections>
-                                </searchBar>
-                            </subviews>
-                            <animations/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstItem="tDU-1c-Tla" firstAttribute="top" secondItem="T5Q-qE-gsp" secondAttribute="top" constant="-6" id="2Yw-95-ap5"/>
-                                <constraint firstAttribute="trailing" secondItem="tDU-1c-Tla" secondAttribute="trailing" id="2ml-BE-LdF"/>
-                                <constraint firstItem="tDU-1c-Tla" firstAttribute="leading" secondItem="T5Q-qE-gsp" secondAttribute="leading" id="7cb-IU-Qnf"/>
-                                <constraint firstAttribute="bottom" secondItem="tDU-1c-Tla" secondAttribute="bottom" constant="-5" id="ZSY-0q-CPI"/>
-                            </constraints>
-                        </view>
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="biR-w1-pSO"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="Ztk-xn-tTo" id="s1b-Iq-CLr"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j61-uQ-www" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController searchResultsTitle="Wellness" id="Ztk-xn-tTo">
+                    <connections>
+                        <outlet property="delegate" destination="b2k-mP-FH7" id="LEt-WT-iWY"/>
+                        <outlet property="searchBar" destination="lgX-kG-UdH" id="egv-XW-cPb"/>
+                        <outlet property="searchContentsController" destination="b2k-mP-FH7" id="0ze-zl-O3x"/>
+                        <outlet property="searchResultsDataSource" destination="b2k-mP-FH7" id="YlY-kv-bkc"/>
+                        <outlet property="searchResultsDelegate" destination="b2k-mP-FH7" id="3at-uk-hor"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1110" y="-66"/>
         </scene>
-        <!--Academic View Controller-->
+        <!--Academic-->
         <scene sceneID="08i-HA-Kil">
             <objects>
                 <tableViewController id="76K-1z-4N5" customClass="AcademicViewController" customModule="EDGE_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -185,9 +161,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="Nkk-OP-yl6">
+                            <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <animations/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="76K-1z-4N5" id="uqW-j2-HNO"/>
+                            </connections>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AcademicCell" textLabel="egH-1g-B3X" detailTextLabel="ahx-zt-yYl" style="IBUITableViewCellStyleSubtitle" id="n8N-lT-8nL">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="136" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="n8N-lT-8nL" id="HHV-33-DLp">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -220,8 +205,7 @@
                             <outlet property="delegate" destination="76K-1z-4N5" id="dKL-8H-d20"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="I0Z-lJ-COF">
-                        <nil key="title"/>
+                    <navigationItem key="navigationItem" title="Academic" id="I0Z-lJ-COF">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="GeP-jZ-eiP">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" id="SU4-RO-M22">
                                 <rect key="frame" x="20" y="11" width="22" height="22"/>
@@ -229,32 +213,22 @@
                                 <animations/>
                             </button>
                         </barButtonItem>
-                        <view key="titleView" contentMode="scaleToFill" id="rvs-24-Pis">
-                            <rect key="frame" x="180" y="5.5" width="240" height="33"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <searchBar contentMode="redraw" placeholder="Academic" translatesAutoresizingMaskIntoConstraints="NO" id="nZN-fT-Xq7">
-                                    <rect key="frame" x="0.0" y="-6" width="240" height="44"/>
-                                    <animations/>
-                                    <textInputTraits key="textInputTraits" autocorrectionType="no"/>
-                                    <connections>
-                                        <outlet property="delegate" destination="wnW-2G-2hF" id="BAd-yN-tR6"/>
-                                    </connections>
-                                </searchBar>
-                            </subviews>
-                            <animations/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstAttribute="bottom" secondItem="nZN-fT-Xq7" secondAttribute="bottom" constant="-5" id="4wt-jg-jgf"/>
-                                <constraint firstAttribute="trailing" secondItem="nZN-fT-Xq7" secondAttribute="trailing" id="mSg-7S-iao"/>
-                                <constraint firstItem="nZN-fT-Xq7" firstAttribute="top" secondItem="rvs-24-Pis" secondAttribute="top" constant="-6" id="txc-MN-eyb"/>
-                                <constraint firstItem="nZN-fT-Xq7" firstAttribute="leading" secondItem="rvs-24-Pis" secondAttribute="leading" id="wsZ-PL-sQf"/>
-                            </constraints>
-                        </view>
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="r3P-WL-RVj"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="dZV-oO-4Pd" id="kbu-mu-1fI"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cZm-8W-3pt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController searchResultsTitle="Academic" id="dZV-oO-4Pd">
+                    <connections>
+                        <outlet property="delegate" destination="76K-1z-4N5" id="ys3-jr-mtX"/>
+                        <outlet property="searchBar" destination="Nkk-OP-yl6" id="a23-0w-B2e"/>
+                        <outlet property="searchContentsController" destination="76K-1z-4N5" id="S81-8F-Vyt"/>
+                        <outlet property="searchResultsDataSource" destination="76K-1z-4N5" id="XzL-bE-n9V"/>
+                        <outlet property="searchResultsDelegate" destination="76K-1z-4N5" id="n4Z-Fy-0WW"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1110" y="601"/>
         </scene>
