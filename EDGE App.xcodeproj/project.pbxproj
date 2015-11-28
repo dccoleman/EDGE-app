@@ -16,11 +16,13 @@
 		DE1F946A1BDFF58D00A0974E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE1F94681BDFF58D00A0974E /* LaunchScreen.storyboard */; };
 		DE1F94751BDFF58D00A0974E /* EDGE_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1F94741BDFF58D00A0974E /* EDGE_AppTests.swift */; };
 		DE1F94801BDFF58D00A0974E /* EDGE_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1F947F1BDFF58D00A0974E /* EDGE_AppUITests.swift */; };
-		DE31C0B31BF1256800FA8AAE /* EDGE Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE31C0B21BF1256800FA8AAE /* EDGE Splash.storyboard */; };
 		DE52C7791BE7CBBE002ACCD8 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE52C7781BE7CBBE002ACCD8 /* Entry.swift */; };
 		DE889B011BFCFBF600772A70 /* academic2.png in Resources */ = {isa = PBXBuildFile; fileRef = DE889AFE1BFCFBF600772A70 /* academic2.png */; };
 		DE889B021BFCFBF600772A70 /* social2.png in Resources */ = {isa = PBXBuildFile; fileRef = DE889AFF1BFCFBF600772A70 /* social2.png */; };
 		DE889B031BFCFBF600772A70 /* wellness2.png in Resources */ = {isa = PBXBuildFile; fileRef = DE889B001BFCFBF600772A70 /* wellness2.png */; };
+		DE94D59E1C0A250000E47C66 /* AcademicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE94D59D1C0A250000E47C66 /* AcademicViewController.swift */; };
+		DE94D5A01C0A264800E47C66 /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE94D59F1C0A264800E47C66 /* SocialViewController.swift */; };
+		DE94D5A21C0A26F900E47C66 /* WellnessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE94D5A11C0A26F900E47C66 /* WellnessViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,11 +58,13 @@
 		DE1F947B1BDFF58D00A0974E /* EDGE AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EDGE AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE1F947F1BDFF58D00A0974E /* EDGE_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EDGE_AppUITests.swift; sourceTree = "<group>"; };
 		DE1F94811BDFF58D00A0974E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DE31C0B21BF1256800FA8AAE /* EDGE Splash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "EDGE Splash.storyboard"; sourceTree = "<group>"; };
 		DE52C7781BE7CBBE002ACCD8 /* Entry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 		DE889AFE1BFCFBF600772A70 /* academic2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = academic2.png; path = Assets.xcassets/academic2.png; sourceTree = "<group>"; };
 		DE889AFF1BFCFBF600772A70 /* social2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = social2.png; path = Assets.xcassets/social2.png; sourceTree = "<group>"; };
 		DE889B001BFCFBF600772A70 /* wellness2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wellness2.png; path = Assets.xcassets/wellness2.png; sourceTree = "<group>"; };
+		DE94D59D1C0A250000E47C66 /* AcademicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcademicViewController.swift; sourceTree = "<group>"; };
+		DE94D59F1C0A264800E47C66 /* SocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
+		DE94D5A11C0A26F900E47C66 /* WellnessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WellnessViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +95,6 @@
 		DE1F94531BDFF58D00A0974E = {
 			isa = PBXGroup;
 			children = (
-				DE31C0B21BF1256800FA8AAE /* EDGE Splash.storyboard */,
 				DE1F945E1BDFF58D00A0974E /* EDGE App */,
 				DE1F94731BDFF58D00A0974E /* EDGE AppTests */,
 				DE1F947E1BDFF58D00A0974E /* EDGE AppUITests */,
@@ -115,6 +118,9 @@
 				DE1F945F1BDFF58D00A0974E /* AppDelegate.swift */,
 				DE1F94611BDFF58D00A0974E /* ViewController.swift */,
 				DE1332181C04057700416CCF /* AppsViewController.swift */,
+				DE94D59D1C0A250000E47C66 /* AcademicViewController.swift */,
+				DE94D59F1C0A264800E47C66 /* SocialViewController.swift */,
+				DE94D5A11C0A26F900E47C66 /* WellnessViewController.swift */,
 				DE1F94631BDFF58D00A0974E /* Main.storyboard */,
 				DE1F94661BDFF58D00A0974E /* Assets.xcassets */,
 				DE1F94681BDFF58D00A0974E /* LaunchScreen.storyboard */,
@@ -255,7 +261,6 @@
 				DE889B021BFCFBF600772A70 /* social2.png in Resources */,
 				DE1F94671BDFF58D00A0974E /* Assets.xcassets in Resources */,
 				DE1F94651BDFF58D00A0974E /* Main.storyboard in Resources */,
-				DE31C0B31BF1256800FA8AAE /* EDGE Splash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +286,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE52C7791BE7CBBE002ACCD8 /* Entry.swift in Sources */,
+				DE94D59E1C0A250000E47C66 /* AcademicViewController.swift in Sources */,
+				DE94D5A01C0A264800E47C66 /* SocialViewController.swift in Sources */,
+				DE94D5A21C0A26F900E47C66 /* WellnessViewController.swift in Sources */,
 				DE1F94621BDFF58D00A0974E /* ViewController.swift in Sources */,
 				DE1332191C04057700416CCF /* AppsViewController.swift in Sources */,
 				DE13321B1C0405D700416CCF /* SampleData.swift in Sources */,

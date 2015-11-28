@@ -4,17 +4,17 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
-        <!--Apps View Controller-->
+        <!--Social View Controller-->
         <scene sceneID="DV6-HG-CTX">
             <objects>
-                <tableViewController id="wnW-2G-2hF" customClass="AppsViewController" customModule="EDGE_App" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="wnW-2G-2hF" customClass="SocialViewController" customModule="EDGE_App" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="1AH-BR-635">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AppCell" textLabel="7Na-9S-hmk" detailTextLabel="Lhm-7K-eYg" style="IBUITableViewCellStyleSubtitle" id="rh6-h2-pYr">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SocialCell" textLabel="7Na-9S-hmk" detailTextLabel="Lhm-7K-eYg" style="IBUITableViewCellStyleSubtitle" id="rh6-h2-pYr">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rh6-h2-pYr" id="J0e-Ok-wN5">
@@ -61,10 +61,10 @@
                             <rect key="frame" x="180" y="5.5" width="240" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Y13-0u-wjv">
+                                <searchBar contentMode="redraw" placeholder="Social" translatesAutoresizingMaskIntoConstraints="NO" id="Y13-0u-wjv">
                                     <rect key="frame" x="0.0" y="-6" width="240" height="44"/>
                                     <animations/>
-                                    <textInputTraits key="textInputTraits"/>
+                                    <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                     <connections>
                                         <outlet property="delegate" destination="wnW-2G-2hF" id="MrV-5D-2VI"/>
                                     </connections>
@@ -81,9 +81,6 @@
                         </view>
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="Bo4-CA-p95"/>
                     </navigationItem>
-                    <connections>
-                        <outlet property="searchDisplayController" destination="tYP-oM-cfA" id="949-av-g5n"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AHB-I1-kca" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <searchDisplayController id="7vL-fU-iwa">
@@ -94,29 +91,20 @@
                         <outlet property="searchResultsDelegate" destination="wnW-2G-2hF" id="eq0-iw-P66"/>
                     </connections>
                 </searchDisplayController>
-                <searchDisplayController id="tYP-oM-cfA">
-                    <connections>
-                        <outlet property="delegate" destination="wnW-2G-2hF" id="jII-gE-1yd"/>
-                        <outlet property="searchBar" destination="Y13-0u-wjv" id="MKY-4U-l1I"/>
-                        <outlet property="searchContentsController" destination="wnW-2G-2hF" id="G5d-vx-Byc"/>
-                        <outlet property="searchResultsDataSource" destination="wnW-2G-2hF" id="Gzo-up-SBj"/>
-                        <outlet property="searchResultsDelegate" destination="wnW-2G-2hF" id="3kV-hS-daw"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1110" y="-724"/>
         </scene>
-        <!--Apps View Controller-->
+        <!--Wellness View Controller-->
         <scene sceneID="JAX-hQ-S1r">
             <objects>
-                <tableViewController id="b2k-mP-FH7" customClass="AppsViewController" customModule="EDGE_App" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="b2k-mP-FH7" customClass="WellnessViewController" customModule="EDGE_App" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="dhI-Uy-8Qh">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AppCell" textLabel="frk-bB-pQW" detailTextLabel="icZ-V1-sPB" style="IBUITableViewCellStyleSubtitle" id="b5t-je-TpI">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WellnessCell" textLabel="frk-bB-pQW" detailTextLabel="icZ-V1-sPB" style="IBUITableViewCellStyleSubtitle" id="b5t-je-TpI">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="b5t-je-TpI" id="JAr-vh-xIP">
@@ -163,10 +151,10 @@
                             <rect key="frame" x="180" y="5.5" width="240" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="tDU-1c-Tla">
+                                <searchBar contentMode="redraw" placeholder="Wellness" translatesAutoresizingMaskIntoConstraints="NO" id="tDU-1c-Tla">
                                     <rect key="frame" x="0.0" y="-6" width="240" height="44"/>
                                     <animations/>
-                                    <textInputTraits key="textInputTraits"/>
+                                    <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                     <connections>
                                         <outlet property="delegate" destination="wnW-2G-2hF" id="ccN-Vc-C9p"/>
                                     </connections>
@@ -188,17 +176,17 @@
             </objects>
             <point key="canvasLocation" x="1110" y="-66"/>
         </scene>
-        <!--Apps View Controller-->
+        <!--Academic View Controller-->
         <scene sceneID="08i-HA-Kil">
             <objects>
-                <tableViewController id="76K-1z-4N5" customClass="AppsViewController" customModule="EDGE_App" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="76K-1z-4N5" customClass="AcademicViewController" customModule="EDGE_App" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6na-GM-guB">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AppCell" textLabel="egH-1g-B3X" detailTextLabel="ahx-zt-yYl" style="IBUITableViewCellStyleSubtitle" id="n8N-lT-8nL">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AcademicCell" textLabel="egH-1g-B3X" detailTextLabel="ahx-zt-yYl" style="IBUITableViewCellStyleSubtitle" id="n8N-lT-8nL">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="n8N-lT-8nL" id="HHV-33-DLp">
@@ -245,10 +233,10 @@
                             <rect key="frame" x="180" y="5.5" width="240" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="nZN-fT-Xq7">
+                                <searchBar contentMode="redraw" placeholder="Academic" translatesAutoresizingMaskIntoConstraints="NO" id="nZN-fT-Xq7">
                                     <rect key="frame" x="0.0" y="-6" width="240" height="44"/>
                                     <animations/>
-                                    <textInputTraits key="textInputTraits"/>
+                                    <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                     <connections>
                                         <outlet property="delegate" destination="wnW-2G-2hF" id="BAd-yN-tR6"/>
                                     </connections>
