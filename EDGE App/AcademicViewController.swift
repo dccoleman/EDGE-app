@@ -30,13 +30,25 @@ class AcademicViewController: UITableViewController, UISearchResultsUpdating, UI
             return controller
         })()
         
+        //TEST TAGS
+        academic[0].addTag("x")
+        academic[0].addTag("WHAT IS THIS TAG")
+        academic[1].addTag("y")
+        academic[2].addTag("z")
         self.tableView.reloadData()
     }
+    
+    //This is the search function.
+    //Returns true if the current cell fits the criteria.
+    //The tag search is held within the entry class but the rest of the search
+    //(label, url, etc) is held here
     
     func filterContentForSearchText(searchText: String) {
         self.filteredAcademic = self.academic.filter({( newApp: Entry ) -> Bool in
             let stringMatch = newApp.label!.lowercaseString.rangeOfString(searchText.lowercaseString)
-            return (stringMatch != nil)
+            let urlMatch = newApp.url!.lowercaseString.rangeOfString(searchText.lowercaseString)
+            let tagMatch = newApp.search(searchText)
+            return tagMatch || (stringMatch != nil) || (urlMatch != nil)
         })
     }
     

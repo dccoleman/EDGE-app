@@ -17,7 +17,6 @@ class ViewController: UIViewController {
         
     }
     
-    @IBOutlet weak var SearchBar: UISearchBar!
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

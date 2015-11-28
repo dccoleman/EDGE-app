@@ -33,10 +33,17 @@ class WellnessViewController: UITableViewController, UISearchResultsUpdating, UI
         self.tableView.reloadData()
     }
     
+    //This is the search function.
+    //Returns true if the current cell fits the criteria.
+    //The tag search is held within the entry class but the rest of the search
+    //(label, url, etc) is held here
+    
     func filterContentForSearchText(searchText: String) {
         self.filteredWellness = self.wellness.filter({( newApp: Entry ) -> Bool in
             let stringMatch = newApp.label!.lowercaseString.rangeOfString(searchText.lowercaseString)
-            return (stringMatch != nil)
+            let urlMatch = newApp.url!.lowercaseString.rangeOfString(searchText.lowercaseString)
+            let tagMatch = newApp.search(searchText)
+            return tagMatch || (stringMatch != nil) || (urlMatch != nil)
         })
     }
     
