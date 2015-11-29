@@ -17,6 +17,8 @@ class SocialViewController: UITableViewController, UISearchResultsUpdating, UISe
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.definesPresentationContext = true
+        
         self.resultSearchController = ({
             let controller = UISearchController(searchResultsController: nil)
             controller.searchResultsUpdater = self
