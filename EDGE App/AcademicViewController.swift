@@ -10,15 +10,26 @@ import UIKit
 
 class AcademicViewController: UITableViewController, UISearchResultsUpdating, UISearchBarDelegate {
     
+    //The list of entries. Sourced from parse
     var academic:[Entry] = academicData
+    
+    //The filtered (searched) list
     var filteredAcademic = [Entry]()
+    
+    //Controller that manages all the searching
     var resultSearchController = UISearchController()
     
+    
+    //If the view loads, this is called
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //causes the search results to override whenever the view
+        //comes into focus. fixes black screens when tabbing back
+        //to a previous search
         self.definesPresentationContext = true
         
+        //sets up the results search controller. This is how we search
         self.resultSearchController = ({
             let controller = UISearchController(searchResultsController: nil)
             controller.searchResultsUpdater = self
@@ -30,6 +41,9 @@ class AcademicViewController: UITableViewController, UISearchResultsUpdating, UI
             
             return controller
         })()
+        
+        //reload the table data just to ensure
+        //it's saved
         self.tableView.reloadData()
     }
     
@@ -37,48 +51,28 @@ class AcademicViewController: UITableViewController, UISearchResultsUpdating, UI
     //Returns true if the current cell fits the criteria.
     //The tag search is held within the entry class but the rest of the search
     //(label, url, etc) is held here
-    
     func filterContentForSearchText(searchText: String) {
         self.filteredAcademic = self.academic.filter({( newApp: Entry ) -> Bool in
             let stringMatch = newApp.label!.lowercaseString.rangeOfString(searchText.lowercaseString)
             let urlMatch = newApp.url!.lowercaseString.rangeOfString(searchText.lowercaseString)
             let tagMatch = newApp.search(searchText)
+            //if any of them are true
             return tagMatch || (stringMatch != nil) || (urlMatch != nil)
         })
     }
     
+    //If we run out of memory. All components of the app are critical
+    //so we can't release anything
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "DetailSegue" {
-            let controller = segue.destinationViewController
-            let entry: Entry
-            
-            if let indexPath = tableView.indexPathForCell(sender as! UITableViewCell) {
-                
-                if resultSearchController.active {
-                    entry = filteredAcademic[indexPath.row]
-                } else {
-                    entry = academic[indexPath.row]
-                }
-                
-                controller.title = entry.label
-            }
-            
-            if (self.resultSearchController.active) {
-                self.resultSearchController.active = false
-            }
-        }
-    }
-    
-    
+    //return the number of sections one row will take up
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
+    //set the count correctly depending on which list is active (search or regular)
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if (self.resultSearchController.active) {
             return self.filteredAcademic.count
@@ -87,10 +81,12 @@ class AcademicViewController: UITableViewController, UISearchResultsUpdating, UI
         }
     }
     
-    
+    //Sets up the table view by creating each cell as necessary
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        //dequeue a cell to give it new properties
         let cell = self.tableView.dequeueReusableCellWithIdentifier("AcademicCell", forIndexPath: indexPath)
         
+        //grab the entry corresponding to the current row
         let entry: Entry
         if (self.resultSearchController.active) {
             entry = self.filteredAcademic[indexPath.row]
@@ -98,12 +94,14 @@ class AcademicViewController: UITableViewController, UISearchResultsUpdating, UI
             entry = self.academic[indexPath.row]
         }
         
+        //set up the cell
         cell.textLabel!.text = entry.label
         cell.detailTextLabel!.text = entry.url
         
         return cell
     }
     
+    //update the search results whenever necessary
     func updateSearchResultsForSearchController(searchController: UISearchController) {
         filteredAcademic.removeAll(keepCapacity: false)
         filterContentForSearchText(searchController.searchBar.text!)
@@ -111,13 +109,15 @@ class AcademicViewController: UITableViewController, UISearchResultsUpdating, UI
         tableView.reloadData()
     }
     
+    //the cancel segue. No specific action needed
     @IBAction func cancelToAcademicAppViewController(segue:UIStoryboardSegue) {
     }
     
+    //The save segue. Saves it to the current list
     @IBAction func saveAcademicApp(segue:UIStoryboardSegue) {
         if let AcademicAppDetailsViewController = segue.sourceViewController as? AcademicAppDetailsViewController {
             
-            //add the new player to the players array
+            //add the new entry to the academic array
             if let entry = AcademicAppDetailsViewController.newEntry {
                 academic.append(entry)
                 print(entry.label!)

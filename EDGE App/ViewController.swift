@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    //The default stuff is good enough here
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
