@@ -58,14 +58,14 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Social" id="6BH-lE-ZY4">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="VSe-iV-icC">
+                        <barButtonItem key="leftBarButtonItem" id="VSe-iV-icC">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" id="LaL-Xa-VEu">
                                 <rect key="frame" x="20" y="11" width="22" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                             </button>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="Bo4-CA-p95">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Bo4-CA-p95">
                             <connections>
                                 <segue destination="1Ra-hQ-HbI" kind="presentation" id="x3c-9O-nyP"/>
                             </connections>
@@ -236,14 +236,14 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Wellness" id="y37-c8-SFF">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="QV0-Ne-8aO">
+                        <barButtonItem key="leftBarButtonItem" id="QV0-Ne-8aO">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" id="YBF-BV-6xe">
                                 <rect key="frame" x="20" y="11" width="22" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                             </button>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="biR-w1-pSO">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="biR-w1-pSO">
                             <connections>
                                 <segue destination="CzO-3J-vWY" kind="presentation" id="0nV-Gc-bUp"/>
                             </connections>
@@ -320,14 +320,14 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Academic" id="I0Z-lJ-COF">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="GeP-jZ-eiP">
+                        <barButtonItem key="leftBarButtonItem" id="GeP-jZ-eiP">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" id="SU4-RO-M22">
                                 <rect key="frame" x="20" y="11" width="22" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                             </button>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="r3P-WL-RVj">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="r3P-WL-RVj">
                             <connections>
                                 <segue destination="vaN-7h-zdK" kind="presentation" id="I5e-7W-OlZ"/>
                             </connections>
@@ -557,7 +557,6 @@
         <!--Navigation Controller-->
         <scene sceneID="h61-cX-sNL">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MNn-Ic-BdF" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CzO-3J-vWY" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2RQ-C7-nE0">
@@ -570,6 +569,7 @@
                         <segue destination="xLl-hg-VCp" kind="relationship" relationship="rootViewController" id="0cJ-XD-7Kf"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MNn-Ic-BdF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1798" y="-66"/>
         </scene>
