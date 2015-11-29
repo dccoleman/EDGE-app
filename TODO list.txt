@@ -1,9 +1,9 @@
 1) Search Bar in Navigation bar - DONE
 2) App Icon - Ryan
-3) Add to internal database - Devon
-4) Add screen - Devon - 33% done, social complete
+3) Add to internal database - DONE
+4) Add screen - Devon - DONE
 5) XML files - Ryan
 6) Search Functionality - DONE
 7) Launch app/store page/go to link when selected - Ryan
 8) Add to server - Ryan
-9) Info Page - Devon - Button Added
+9) Info Page - Devon - Just need the image to segue to, then will be done
