@@ -111,4 +111,21 @@ class WellnessViewController: UITableViewController, UISearchResultsUpdating, UI
         tableView.reloadData()
     }
     
+    @IBAction func cancelToWellnessAppViewController(segue:UIStoryboardSegue) {
+    }
+    
+    @IBAction func saveWellnessApp(segue:UIStoryboardSegue) {
+        if let WellnessAppDetailsViewController = segue.sourceViewController as? WellnessAppDetailsViewController {
+            
+            //add the new player to the players array
+            if let entry = WellnessAppDetailsViewController.newEntry {
+                wellness.append(entry)
+                
+                //update the tableView
+                let indexPath = NSIndexPath(forRow: wellness.count-1, inSection: 0)
+                tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+            }
+        }
+    }
+    
 }

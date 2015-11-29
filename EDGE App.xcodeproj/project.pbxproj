@@ -23,6 +23,8 @@
 		DE94D5A01C0A264800E47C66 /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE94D59F1C0A264800E47C66 /* SocialViewController.swift */; };
 		DE94D5A21C0A26F900E47C66 /* WellnessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE94D5A11C0A26F900E47C66 /* WellnessViewController.swift */; };
 		DECD3AF41C0A5DE8000A4A1F /* SocialAppDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD3AF31C0A5DE8000A4A1F /* SocialAppDetailsViewController.swift */; };
+		DECD3AF61C0A72FA000A4A1F /* WellnessAppDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD3AF51C0A72FA000A4A1F /* WellnessAppDetailsViewController.swift */; };
+		DEDBBE4C1C0A795300A594DE /* AcademicAppDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDBBE4B1C0A795300A594DE /* AcademicAppDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		DE94D59F1C0A264800E47C66 /* SocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
 		DE94D5A11C0A26F900E47C66 /* WellnessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WellnessViewController.swift; sourceTree = "<group>"; };
 		DECD3AF31C0A5DE8000A4A1F /* SocialAppDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialAppDetailsViewController.swift; sourceTree = "<group>"; };
+		DECD3AF51C0A72FA000A4A1F /* WellnessAppDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WellnessAppDetailsViewController.swift; sourceTree = "<group>"; };
+		DEDBBE4B1C0A795300A594DE /* AcademicAppDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcademicAppDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,9 +122,11 @@
 				DE1F945F1BDFF58D00A0974E /* AppDelegate.swift */,
 				DE1F94611BDFF58D00A0974E /* ViewController.swift */,
 				DE94D59D1C0A250000E47C66 /* AcademicViewController.swift */,
+				DEDBBE4B1C0A795300A594DE /* AcademicAppDetailsViewController.swift */,
 				DE94D59F1C0A264800E47C66 /* SocialViewController.swift */,
 				DE94D5A11C0A26F900E47C66 /* WellnessViewController.swift */,
 				DE1F94631BDFF58D00A0974E /* Main.storyboard */,
+				DECD3AF51C0A72FA000A4A1F /* WellnessAppDetailsViewController.swift */,
 				DECD3AF31C0A5DE8000A4A1F /* SocialAppDetailsViewController.swift */,
 				DE1F94661BDFF58D00A0974E /* Assets.xcassets */,
 				DE1F94681BDFF58D00A0974E /* LaunchScreen.storyboard */,
@@ -285,9 +291,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEDBBE4C1C0A795300A594DE /* AcademicAppDetailsViewController.swift in Sources */,
 				DECD3AF41C0A5DE8000A4A1F /* SocialAppDetailsViewController.swift in Sources */,
 				DE52C7791BE7CBBE002ACCD8 /* Entry.swift in Sources */,
 				DE94D59E1C0A250000E47C66 /* AcademicViewController.swift in Sources */,
+				DECD3AF61C0A72FA000A4A1F /* WellnessAppDetailsViewController.swift in Sources */,
 				DE94D5A01C0A264800E47C66 /* SocialViewController.swift in Sources */,
 				DE94D5A21C0A26F900E47C66 /* WellnessViewController.swift in Sources */,
 				DE1F94621BDFF58D00A0974E /* ViewController.swift in Sources */,

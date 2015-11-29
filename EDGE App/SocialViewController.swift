@@ -104,13 +104,13 @@ class SocialViewController: UITableViewController, UISearchResultsUpdating, UISe
     }
     
     func updateSearchResultsForSearchController(searchController: UISearchController) {
-        //filteredAcademic.removeAll(keepCapacity: false)
+        filteredSocial.removeAll(keepCapacity: false)
         filterContentForSearchText(searchController.searchBar.text!)
         
         tableView.reloadData()
     }
     
-    @IBAction func cancelToPlayersViewController(segue:UIStoryboardSegue) {
+    @IBAction func cancelToSocialAppViewController(segue:UIStoryboardSegue) {
     }
     
     @IBAction func saveSocialApp(segue:UIStoryboardSegue) {

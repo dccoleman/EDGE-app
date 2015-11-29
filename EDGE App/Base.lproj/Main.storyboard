@@ -162,7 +162,7 @@
                     <navigationItem key="navigationItem" title="Add Social Tool" id="TBR-7k-GXU">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="e9s-Ql-m7H">
                             <connections>
-                                <segue destination="nfV-Zq-yGy" kind="unwind" unwindAction="cancelToPlayersViewController:" id="54u-hX-kHA"/>
+                                <segue destination="nfV-Zq-yGy" kind="unwind" unwindAction="cancelToSocialAppViewController:" id="54u-hX-kHA"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="Vvf-Kx-rsm">
@@ -177,8 +177,8 @@
                         <outlet property="SocialAppUrlField" destination="EfU-aB-Xzh" id="yQP-Dc-LyU"/>
                     </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DDm-sO-AmX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="nfV-Zq-yGy" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DDm-sO-AmX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2610" y="-724"/>
         </scene>
@@ -243,7 +243,11 @@
                                 <animations/>
                             </button>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="biR-w1-pSO"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="biR-w1-pSO">
+                            <connections>
+                                <segue destination="CzO-3J-vWY" kind="presentation" id="0nV-Gc-bUp"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="searchDisplayController" destination="Ztk-xn-tTo" id="s1b-Iq-CLr"/>
@@ -323,7 +327,11 @@
                                 <animations/>
                             </button>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="r3P-WL-RVj"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="r3P-WL-RVj">
+                            <connections>
+                                <segue destination="vaN-7h-zdK" kind="presentation" id="I5e-7W-OlZ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="searchDisplayController" destination="dZV-oO-4Pd" id="kbu-mu-1fI"/>
@@ -440,6 +448,254 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hlx-cn-fqY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1798" y="-724"/>
+        </scene>
+        <!--Add Wellness Tool-->
+        <scene sceneID="bdT-YH-aPf">
+            <objects>
+                <tableViewController id="xLl-hg-VCp" customClass="WellnessAppDetailsViewController" customModule="EDGE_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="FpZ-AA-0NT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Name" id="xzP-Gq-Zx2">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="TQE-U5-mHq">
+                                        <rect key="frame" x="0.0" y="113.5" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TQE-U5-mHq" id="lFp-8U-Uoe">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T2d-Uu-JMB">
+                                                    <rect key="frame" x="0.0" y="5" width="600" height="30"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="URL" id="sEu-LS-yVu">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="Eg2-Cp-vka">
+                                        <rect key="frame" x="0.0" y="207.5" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Eg2-Cp-vka" id="Ce7-GE-4jA">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="miN-Tt-P1Y">
+                                                    <rect key="frame" x="0.0" y="8" width="600" height="30"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Tags" id="29h-Av-DHI">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="WCm-0U-UgC">
+                                        <rect key="frame" x="0.0" y="301.5" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WCm-0U-UgC" id="GFE-Ah-gnb">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wqo-BL-NdL">
+                                                    <rect key="frame" x="0.0" y="7" width="600" height="30"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="xLl-hg-VCp" id="QgS-oE-Xkl"/>
+                            <outlet property="delegate" destination="xLl-hg-VCp" id="FHI-uP-j1n"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Add Wellness Tool" id="gS1-M1-CdG">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="W6U-K8-TOS">
+                            <connections>
+                                <segue destination="1vJ-lZ-Eaz" kind="unwind" unwindAction="cancelToWellnessAppViewController:" id="MOf-66-PQA"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="O1p-nL-lVD">
+                            <connections>
+                                <segue destination="1vJ-lZ-Eaz" kind="unwind" identifier="SaveWellnessApp" unwindAction="saveWellnessApp:" id="IH3-Tt-z1E"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="WellnessAppName" destination="T2d-Uu-JMB" id="Suu-xe-D2S"/>
+                        <outlet property="WellnessAppTags" destination="wqo-BL-NdL" id="sVe-wu-ohD"/>
+                        <outlet property="WellnessAppUrl" destination="miN-Tt-P1Y" id="pDL-Md-3QN"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Plr-ao-WS8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="1vJ-lZ-Eaz" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2610" y="-66"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="h61-cX-sNL">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MNn-Ic-BdF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CzO-3J-vWY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2RQ-C7-nE0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xLl-hg-VCp" kind="relationship" relationship="rootViewController" id="0cJ-XD-7Kf"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="1798" y="-66"/>
+        </scene>
+        <!--Add Academic Tool-->
+        <scene sceneID="V4m-TF-GDI">
+            <objects>
+                <tableViewController id="khh-Gr-GMF" customClass="AcademicAppDetailsViewController" customModule="EDGE_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="Zpa-Vd-hHP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Name" id="gBN-KG-75a">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="lL8-Oi-wIj">
+                                        <rect key="frame" x="0.0" y="113.5" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lL8-Oi-wIj" id="LQO-TK-UhW">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tug-k7-pwx">
+                                                    <rect key="frame" x="0.0" y="7" width="600" height="30"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="URL" id="yrv-pW-3On">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="xJ9-tQ-46p">
+                                        <rect key="frame" x="0.0" y="207.5" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xJ9-tQ-46p" id="Otx-lV-Dcg">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Feg-HQ-V6Y">
+                                                    <rect key="frame" x="0.0" y="5" width="600" height="30"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Tags" id="vje-0Z-s1L">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="RKP-OK-6g0">
+                                        <rect key="frame" x="0.0" y="301.5" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RKP-OK-6g0" id="SRc-ld-XyC">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8EJ-dz-Y54">
+                                                    <rect key="frame" x="0.0" y="7" width="600" height="30"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="khh-Gr-GMF" id="5KO-wP-PWJ"/>
+                            <outlet property="delegate" destination="khh-Gr-GMF" id="ehN-96-5BF"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Add Academic Tool" id="6Hk-YP-dBS">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Et6-yQ-eVv">
+                            <connections>
+                                <segue destination="IPc-le-cmz" kind="unwind" unwindAction="cancelToAcademicAppViewController:" id="9Fg-vg-E5N"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="yEJ-h4-jqg">
+                            <connections>
+                                <segue destination="IPc-le-cmz" kind="unwind" identifier="SaveAcademicApp" unwindAction="saveAcademicApp:" id="kBL-cn-alM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="AcademicAppName" destination="Tug-k7-pwx" id="woy-7B-xNv"/>
+                        <outlet property="AcademicAppTags" destination="8EJ-dz-Y54" id="XeW-gf-jzr"/>
+                        <outlet property="AcademicAppUrl" destination="Feg-HQ-V6Y" id="e7U-j9-s83"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Kn-fM-yf7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="IPc-le-cmz" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2610" y="601"/>
+        </scene>
+        <!--Add Academic Tool-->
+        <scene sceneID="1WU-rx-r6p">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vaN-7h-zdK" userLabel="Add Academic Tool" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="u81-di-mga">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="khh-Gr-GMF" kind="relationship" relationship="rootViewController" id="OdQ-KE-5Eg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lqE-Ws-Lt2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1798" y="601"/>
         </scene>
     </scenes>
     <resources>

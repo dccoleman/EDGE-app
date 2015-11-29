@@ -13,7 +13,6 @@ class AcademicViewController: UITableViewController, UISearchResultsUpdating, UI
     var academic:[Entry] = academicData
     var filteredAcademic = [Entry]()
     var resultSearchController = UISearchController()
-    var selectedScope = "All"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,12 +28,6 @@ class AcademicViewController: UITableViewController, UISearchResultsUpdating, UI
             
             return controller
         })()
-        
-        //TEST TAGS
-        academic[0].addTag("x")
-        academic[0].addTag("WHAT IS THIS TAG")
-        academic[1].addTag("y")
-        academic[2].addTag("z")
         self.tableView.reloadData()
     }
     
@@ -114,6 +107,24 @@ class AcademicViewController: UITableViewController, UISearchResultsUpdating, UI
         filterContentForSearchText(searchController.searchBar.text!)
         
         tableView.reloadData()
+    }
+    
+    @IBAction func cancelToAcademicAppViewController(segue:UIStoryboardSegue) {
+    }
+    
+    @IBAction func saveAcademicApp(segue:UIStoryboardSegue) {
+        if let AcademicAppDetailsViewController = segue.sourceViewController as? AcademicAppDetailsViewController {
+            
+            //add the new player to the players array
+            if let entry = AcademicAppDetailsViewController.newEntry {
+                academic.append(entry)
+                print(entry.label!)
+                
+                //update the tableView
+                let indexPath = NSIndexPath(forRow: academic.count-1, inSection: 0)
+                tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+            }
+        }
     }
 
 }
