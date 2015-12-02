@@ -57,7 +57,7 @@ class AcademicViewController: UITableViewController, UISearchResultsUpdating, UI
             let urlMatch = newApp.url!.lowercaseString.rangeOfString(searchText.lowercaseString)
             let tagMatch = newApp.search(searchText)
             //if any of them are true
-            return tagMatch || (stringMatch != nil) || (urlMatch != nil)
+            return tagMatch || (stringMatch != nil) || (urlMatch != nil) || searchText.isEmpty
         })
     }
     

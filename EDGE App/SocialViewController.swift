@@ -44,7 +44,7 @@ class SocialViewController: UITableViewController, UISearchResultsUpdating, UISe
             let stringMatch = newApp.label!.lowercaseString.rangeOfString(searchText.lowercaseString)
             let urlMatch = newApp.url!.lowercaseString.rangeOfString(searchText.lowercaseString)
             let tagMatch = newApp.search(searchText)
-            return tagMatch || (stringMatch != nil) || (urlMatch != nil)
+            return tagMatch || (stringMatch != nil) || (urlMatch != nil) || searchText.isEmpty
         })
     }
     
