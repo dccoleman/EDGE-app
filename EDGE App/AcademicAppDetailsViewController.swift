@@ -10,6 +10,9 @@ import UIKit
 
 class AcademicAppDetailsViewController: UITableViewController {
     
+    var soc = false
+    var well = false
+    
     //IBOutlets for all the text fields in the add screen
     @IBOutlet weak var AcademicAppName: UITextField!
     @IBOutlet weak var AcademicAppUrl: UITextField!
@@ -18,6 +21,25 @@ class AcademicAppDetailsViewController: UITableViewController {
     //A variable to keep the new entry
     var newEntry:Entry?
 
+    @IBOutlet weak var DeveloperName: UITextField!
+    @IBOutlet weak var AppName: UITextField!
+    @IBAction func SocialUpdated(sender: UISwitch) {
+        if soc {
+            soc = false
+        }
+        else {
+            soc = true
+        }
+    }
+    
+    @IBAction func WellnessUpdated(sender: UISwitch) {
+        if well {
+            well = false
+        }
+        else {
+            well = true
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +52,8 @@ class AcademicAppDetailsViewController: UITableViewController {
     //create a new entry object with the given parameters from the segue
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "SaveAcademicApp" {
-            newEntry = Entry(soc: false, ac: true, well: false, app: true, label: (AcademicAppName.text!), url: (AcademicAppUrl.text!), tags: (AcademicAppTags.text!))
+            newEntry = Entry(soc: soc, ac: true, well: well, app: true, label: (AcademicAppName.text!), url: (AcademicAppUrl.text!), tags: (AcademicAppTags.text!))
+            
             //HERE is where we push to the xml file or parse. Maybe not I'm not sure yet.
         }
     }

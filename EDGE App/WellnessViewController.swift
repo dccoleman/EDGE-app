@@ -39,7 +39,6 @@ class WellnessViewController: UITableViewController, UISearchResultsUpdating, UI
     //Returns true if the current cell fits the criteria.
     //The tag search is held within the entry class but the rest of the search
     //(label, url, etc) is held here
-    
     func filterContentForSearchText(searchText: String) {
         self.filteredWellness = self.wellness.filter({( newApp: Entry ) -> Bool in
             let stringMatch = newApp.label!.lowercaseString.rangeOfString(searchText.lowercaseString)
@@ -122,6 +121,7 @@ class WellnessViewController: UITableViewController, UISearchResultsUpdating, UI
             //add the new player to the players array
             if let entry = WellnessAppDetailsViewController.newEntry {
                 wellness.append(entry)
+                //SocialViewController.social.append(entry)
                 
                 //update the tableView
                 let indexPath = NSIndexPath(forRow: wellness.count-1, inSection: 0)

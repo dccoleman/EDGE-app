@@ -15,6 +15,33 @@ class WellnessAppDetailsViewController: UITableViewController {
     @IBOutlet weak var WellnessAppName: UITextField!
     @IBOutlet weak var WellnessAppUrl: UITextField!
     @IBOutlet weak var WellnessAppTags: UITextField!
+    @IBOutlet weak var AppName: UITextField!
+    @IBOutlet weak var DeveloperName: UITextField!
+    
+    var soc = false
+    var ac = false
+    
+    @IBAction func SocialUpdated(sender: UISwitch) {
+        if soc {
+            soc = false
+            print("Social Off")
+        }
+        else {
+            soc = true
+            print("Social On")
+        }
+    }
+    
+    @IBAction func AcademicUpdated(sender: UISwitch) {
+        if ac {
+            ac = false
+            print("Academic Off")
+        }
+        else {
+            ac = true
+            print("Academic On")
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +55,7 @@ class WellnessAppDetailsViewController: UITableViewController {
     //create a new entry object with the given parameters
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "SaveWellnessApp" {
-            newEntry = Entry(soc: false, ac: false, well: true, app: true, label: (WellnessAppName.text!), url: (WellnessAppUrl.text!), tags: (WellnessAppTags.text!))
+            newEntry = Entry(soc: soc, ac: ac, well: true, app: true, label: (WellnessAppName.text!), url: (WellnessAppUrl.text!), tags: (WellnessAppTags.text!))
             //HERE is where we push to parse
         }
     }
