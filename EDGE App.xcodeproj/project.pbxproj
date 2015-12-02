@@ -8,6 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		551960F41C0E5C6700B22707 /* MyUITabViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551960F31C0E5C6700B22707 /* MyUITabViewCell.swift */; };
+		551960FA1C0E7EEA00B22707 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 551960F91C0E7EEA00B22707 /* AudioToolbox.framework */; };
+		551960FC1C0E7EF700B22707 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 551960FB1C0E7EF700B22707 /* CFNetwork.framework */; };
+		551960FE1C0E7EFF00B22707 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 551960FD1C0E7EFF00B22707 /* CoreGraphics.framework */; };
+		551961001C0E7F0900B22707 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 551960FF1C0E7F0900B22707 /* CoreLocation.framework */; };
+		551961021C0E7F1400B22707 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 551961011C0E7F1400B22707 /* QuartzCore.framework */; };
+		551961041C0E7F2400B22707 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 551961031C0E7F2400B22707 /* Security.framework */; };
+		551961061C0E7F2D00B22707 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 551961051C0E7F2D00B22707 /* StoreKit.framework */; };
+		551961081C0E7F3600B22707 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 551961071C0E7F3600B22707 /* SystemConfiguration.framework */; };
+		5519610A1C0E7F4700B22707 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 551961091C0E7F4700B22707 /* libsqlite3.tbd */; };
+		5519610C1C0E7F8A00B22707 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5519610B1C0E7F8A00B22707 /* libz.tbd */; };
+		5519610E1C0E80AA00B22707 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5519610D1C0E80AA00B22707 /* Bolts.framework */; };
+		551961101C0E80B100B22707 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5519610F1C0E80B100B22707 /* Parse.framework */; };
+		551961121C0E80C300B22707 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 551961111C0E80C300B22707 /* ParseUI.framework */; };
 		DE13321B1C0405D700416CCF /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE13321A1C0405D700416CCF /* SampleData.swift */; };
 		DE1F94601BDFF58D00A0974E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1F945F1BDFF58D00A0974E /* AppDelegate.swift */; };
 		DE1F94621BDFF58D00A0974E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1F94611BDFF58D00A0974E /* ViewController.swift */; };
@@ -47,6 +60,20 @@
 
 /* Begin PBXFileReference section */
 		551960F31C0E5C6700B22707 /* MyUITabViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyUITabViewCell.swift; path = ../MyUITabViewCell.swift; sourceTree = "<group>"; };
+		551960F91C0E7EEA00B22707 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		551960FB1C0E7EF700B22707 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		551960FD1C0E7EFF00B22707 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		551960FF1C0E7F0900B22707 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		551961011C0E7F1400B22707 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		551961031C0E7F2400B22707 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		551961051C0E7F2D00B22707 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		551961071C0E7F3600B22707 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		551961091C0E7F4700B22707 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		5519610B1C0E7F8A00B22707 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		5519610D1C0E80AA00B22707 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "SDKs/parse-library-1/Bolts.framework"; sourceTree = "<group>"; };
+		5519610F1C0E80B100B22707 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "SDKs/parse-library-1/Parse.framework"; sourceTree = "<group>"; };
+		551961111C0E80C300B22707 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = "SDKs/parse-library-1/ParseUI.framework"; sourceTree = "<group>"; };
+		551961131C0E818A00B22707 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		DE13321A1C0405D700416CCF /* SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		DE1F945C1BDFF58D00A0974E /* EDGE App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EDGE App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE1F945F1BDFF58D00A0974E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +105,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5519610C1C0E7F8A00B22707 /* libz.tbd in Frameworks */,
+				5519610A1C0E7F4700B22707 /* libsqlite3.tbd in Frameworks */,
+				551961081C0E7F3600B22707 /* SystemConfiguration.framework in Frameworks */,
+				551961061C0E7F2D00B22707 /* StoreKit.framework in Frameworks */,
+				551961041C0E7F2400B22707 /* Security.framework in Frameworks */,
+				551961021C0E7F1400B22707 /* QuartzCore.framework in Frameworks */,
+				551961001C0E7F0900B22707 /* CoreLocation.framework in Frameworks */,
+				551960FE1C0E7EFF00B22707 /* CoreGraphics.framework in Frameworks */,
+				5519610E1C0E80AA00B22707 /* Bolts.framework in Frameworks */,
+				551960FC1C0E7EF700B22707 /* CFNetwork.framework in Frameworks */,
+				551961101C0E80B100B22707 /* Parse.framework in Frameworks */,
+				551960FA1C0E7EEA00B22707 /* AudioToolbox.framework in Frameworks */,
+				551961121C0E80C300B22707 /* ParseUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +141,19 @@
 		DE1F94531BDFF58D00A0974E = {
 			isa = PBXGroup;
 			children = (
+				551961111C0E80C300B22707 /* ParseUI.framework */,
+				5519610F1C0E80B100B22707 /* Parse.framework */,
+				5519610D1C0E80AA00B22707 /* Bolts.framework */,
+				5519610B1C0E7F8A00B22707 /* libz.tbd */,
+				551961091C0E7F4700B22707 /* libsqlite3.tbd */,
+				551961071C0E7F3600B22707 /* SystemConfiguration.framework */,
+				551961051C0E7F2D00B22707 /* StoreKit.framework */,
+				551961031C0E7F2400B22707 /* Security.framework */,
+				551961011C0E7F1400B22707 /* QuartzCore.framework */,
+				551960FF1C0E7F0900B22707 /* CoreLocation.framework */,
+				551960FD1C0E7EFF00B22707 /* CoreGraphics.framework */,
+				551960FB1C0E7EF700B22707 /* CFNetwork.framework */,
+				551960F91C0E7EEA00B22707 /* AudioToolbox.framework */,
 				DE1F945E1BDFF58D00A0974E /* EDGE App */,
 				DE1F94731BDFF58D00A0974E /* EDGE AppTests */,
 				DE1F947E1BDFF58D00A0974E /* EDGE AppUITests */,
@@ -121,8 +174,9 @@
 		DE1F945E1BDFF58D00A0974E /* EDGE App */ = {
 			isa = PBXGroup;
 			children = (
-				551960F31C0E5C6700B22707 /* MyUITabViewCell.swift */,
+				551961131C0E818A00B22707 /* Bridging-Header.h */,
 				DE1F945F1BDFF58D00A0974E /* AppDelegate.swift */,
+				551960F31C0E5C6700B22707 /* MyUITabViewCell.swift */,
 				DE1F94611BDFF58D00A0974E /* ViewController.swift */,
 				DE94D59D1C0A250000E47C66 /* AcademicViewController.swift */,
 				DEDBBE4B1C0A795300A594DE /* AcademicAppDetailsViewController.swift */,
@@ -447,10 +501,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SDKs/parse-library-1",
+					"$(PROJECT_DIR)/EDGE",
+					App,
+				);
 				INFOPLIST_FILE = "EDGE App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "WPI.EDGE-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$PROJECT_DIR/EDGE App/Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -460,10 +521,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SDKs/parse-library-1",
+					"$(PROJECT_DIR)/EDGE",
+					App,
+				);
 				INFOPLIST_FILE = "EDGE App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "WPI.EDGE-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$PROJECT_DIR/EDGE App/Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
