@@ -35,4 +35,16 @@ class AcademicAppDetailsViewController: UITableViewController {
         }
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        //CODE TO BE RUN ON when the cell is clicked
+        
+        // get correct URL from the selected table cell !!!
+        // just go to google for now
+        var url  = NSURL(string: "http://www.google.com"); // Change the URL with your URL Scheme
+        if UIApplication.sharedApplication().canOpenURL(url!) == true
+        {
+            UIApplication.sharedApplication().openURL(url!)
+        }
+    }
+    
 }

@@ -76,6 +76,7 @@ class SocialViewController: UITableViewController, UISearchResultsUpdating, UISe
     }
     
     
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -89,8 +90,11 @@ class SocialViewController: UITableViewController, UISearchResultsUpdating, UISe
     }
     
     
+    
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCellWithIdentifier("SocialCell", forIndexPath: indexPath)
+        
         
         let entry: Entry
         if (self.resultSearchController.active) {
@@ -98,6 +102,8 @@ class SocialViewController: UITableViewController, UISearchResultsUpdating, UISe
         } else {
             entry = self.social[indexPath.row]
         }
+        
+        
         
         cell.textLabel!.text = entry.label
         cell.detailTextLabel!.text = entry.url
@@ -126,6 +132,46 @@ class SocialViewController: UITableViewController, UISearchResultsUpdating, UISe
                 let indexPath = NSIndexPath(forRow: social.count-1, inSection: 0)
                 tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
             }
+        }
+    }
+    
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        //CODE TO BE RUN ON when the cell is clicked
+        
+        // get correct URL from the selected table cell !!! dont nedd cell only need data
+        //let cell = self.tableView.cellForRowAtIndexPath(indexPath)
+
+        var entry : Entry
+        if resultSearchController.active {
+            entry = filteredSocial[indexPath.row]
+        } else {
+            entry = social[indexPath.row]
+        }
+        
+        if(!entry.app )
+        {
+            // fix in refactor - get the data tbe directly in the cell
+            let url = NSURL(string: (entry.url)!)
+        
+            // Change the URL with your URL Scheme
+            if UIApplication.sharedApplication().canOpenURL(url!) == true
+            {
+                UIApplication.sharedApplication().openURL(url!)
+            }
+        }
+        else
+        {
+            
+            let url = NSURL(string: ("http://itunes.com/apps/"+entry.developerName!+"/"+entry.appName!))
+            
+            //!!! open in store
+            // Change the URL with your URL Scheme
+            if UIApplication.sharedApplication().canOpenURL(url!) == true
+            {
+                UIApplication.sharedApplication().openURL(url!)
+            }
+
         }
     }
     

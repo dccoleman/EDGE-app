@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		551960F41C0E5C6700B22707 /* MyUITabViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551960F31C0E5C6700B22707 /* MyUITabViewCell.swift */; };
 		DE13321B1C0405D700416CCF /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE13321A1C0405D700416CCF /* SampleData.swift */; };
 		DE1F94601BDFF58D00A0974E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1F945F1BDFF58D00A0974E /* AppDelegate.swift */; };
 		DE1F94621BDFF58D00A0974E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1F94611BDFF58D00A0974E /* ViewController.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		551960F31C0E5C6700B22707 /* MyUITabViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyUITabViewCell.swift; path = ../MyUITabViewCell.swift; sourceTree = "<group>"; };
 		DE13321A1C0405D700416CCF /* SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		DE1F945C1BDFF58D00A0974E /* EDGE App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EDGE App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE1F945F1BDFF58D00A0974E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 		DE1F945E1BDFF58D00A0974E /* EDGE App */ = {
 			isa = PBXGroup;
 			children = (
+				551960F31C0E5C6700B22707 /* MyUITabViewCell.swift */,
 				DE1F945F1BDFF58D00A0974E /* AppDelegate.swift */,
 				DE1F94611BDFF58D00A0974E /* ViewController.swift */,
 				DE94D59D1C0A250000E47C66 /* AcademicViewController.swift */,
@@ -301,6 +304,7 @@
 				DE1F94621BDFF58D00A0974E /* ViewController.swift in Sources */,
 				DE13321B1C0405D700416CCF /* SampleData.swift in Sources */,
 				DE1F94601BDFF58D00A0974E /* AppDelegate.swift in Sources */,
+				551960F41C0E5C6700B22707 /* MyUITabViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
