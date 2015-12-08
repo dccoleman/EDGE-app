@@ -89,7 +89,7 @@ class SocialViewController: UITableViewController, UISearchResultsUpdating, UISe
             
         query.fromLocalDatastore()
             
-        //query.whereKey("username", equalTo: PFUser.currentUser().username)
+        query.whereKey("Social", equalTo: true)
             
         query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
                 
@@ -120,7 +120,7 @@ class SocialViewController: UITableViewController, UISearchResultsUpdating, UISe
     
         let query: PFQuery = PFQuery(className: "Entry")
     
-        //query.whereKey("username", equalTo: PFUser.currentUser().username)
+        query.whereKey("Social", equalTo: true)
     
         query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
     

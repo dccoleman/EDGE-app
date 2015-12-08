@@ -277,9 +277,9 @@
                                 <segue destination="nfV-Zq-yGy" kind="unwind" unwindAction="cancelToSocialAppViewController:" id="54u-hX-kHA"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Vvf-Kx-rsm" userLabel="Save">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Vvf-Kx-rsm">
                             <connections>
-                                <action selector="saveAction:" destination="n5z-8l-qTM" id="KJI-RL-lbU"/>
+                                <segue destination="nfV-Zq-yGy" kind="unwind" identifier="SaveSocialApp" unwindAction="saveSocialApp:" id="9wi-ay-j8o"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1092,6 +1092,6 @@
         <image name="wellness2.png" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="HFF-47-oJe"/>
+        <segue reference="QdR-6Q-fzH"/>
     </inferredMetricsTieBreakers>
 </document>

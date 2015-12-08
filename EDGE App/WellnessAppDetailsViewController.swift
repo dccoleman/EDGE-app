@@ -11,6 +11,7 @@ import UIKit
 class WellnessAppDetailsViewController: UITableViewController {
     
     var newEntry:Entry?
+    var object: PFObject!
     
     @IBOutlet weak var WellnessAppName: UITextField!
     @IBOutlet weak var WellnessAppUrl: UITextField!
@@ -45,6 +46,7 @@ class WellnessAppDetailsViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.object = PFObject(className: "Entry")
     }
     
     override func didReceiveMemoryWarning() {
@@ -52,11 +54,44 @@ class WellnessAppDetailsViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func saveAction() {
+        
+        print("Saving")
+        print("Saving \n")
+        print("Saving \n")
+        
+        self.object["Social"] = self.soc
+        self.object["academic"] = self.ac
+        self.object["wellness"] = true
+        self.object["app"] = WellnessAppName.text?.isEmpty
+        self.object["label"] = WellnessAppName.text
+        self.object["url"] = WellnessAppUrl.text
+        self.object["tags"] = WellnessAppTags.text
+        self.object["DeveloperName"] =  DeveloperName.text
+        self.object["appName"] = AppName.text
+        
+        self.object.saveEventually { (success, error) -> Void in
+            
+            if (error == nil) {
+                
+                
+                
+            }else {
+                
+                print(error)
+                
+            }
+            
+        }
+        
+        self.navigationController?.popToRootViewControllerAnimated(true)
+    }
+    
     //create a new entry object with the given parameters
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "SaveWellnessApp" {
             newEntry = Entry(soc: soc, ac: ac, well: true, app: true, label: (WellnessAppName.text!), url: (WellnessAppUrl.text!), tags: (WellnessAppTags.text!))
-            //HERE is where we push to parse
+            saveAction()
         }
     }
     

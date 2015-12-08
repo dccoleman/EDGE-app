@@ -59,7 +59,7 @@ class SocialAppDetailsViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func saveAction(sender: AnyObject) {
+    @IBAction func saveAction() {
         
         print("Saving")
         print("Saving \n")
@@ -68,12 +68,12 @@ class SocialAppDetailsViewController: UITableViewController {
         self.object["Social"] = true
         self.object["academic"] = self.ac
         self.object["wellness"] = self.well
-        self.object["app"] = false
-        self.object["label"] = "Test"
-        self.object["url"] = "http//www.google.com"
-        self.object["tags"] = "lol"
-        self.object["DeveloperName"] = "Ryan Orlando"
-        self.object["appName"] = "Name"
+        self.object["app"] = SocialAppName.text?.isEmpty
+        self.object["label"] = SocialAppName.text
+        self.object["url"] = SocialAppUrlField.text
+        self.object["tags"] = SocialAppTags.text
+        self.object["DeveloperName"] =  DeveloperName.text
+        self.object["appName"] = AppName.text
         
         self.object.saveEventually { (success, error) -> Void in
             
@@ -96,7 +96,9 @@ class SocialAppDetailsViewController: UITableViewController {
         if segue.identifier == "SaveSocialApp" {
             newEntry = Entry(soc: true, ac: ac, well: well, app: true, label: (SocialAppName.text!), url: (SocialAppUrlField.text!), tags: (SocialAppTags.text!))
             //HERE is where we push to parse
+            saveAction()
         }
+        
     }
 
 }

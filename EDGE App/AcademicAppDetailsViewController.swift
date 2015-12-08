@@ -13,6 +13,8 @@ class AcademicAppDetailsViewController: UITableViewController {
     var soc = false
     var well = false
     
+    var object: PFObject!
+    
     //IBOutlets for all the text fields in the add screen
     @IBOutlet weak var AcademicAppName: UITextField!
     @IBOutlet weak var AcademicAppUrl: UITextField!
@@ -43,10 +45,44 @@ class AcademicAppDetailsViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.object = PFObject(className: "Entry")
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    @IBAction func saveAction() {
+        
+        print("Saving")
+        print("Saving \n")
+        print("Saving \n")
+        
+        self.object["Social"] = self.soc
+        self.object["academic"] = true
+        self.object["wellness"] = self.well
+        self.object["app"] = AcademicAppName.text?.isEmpty
+        self.object["label"] = AcademicAppName.text
+        self.object["url"] = AcademicAppUrl.text
+        self.object["tags"] = AcademicAppTags.text
+        self.object["DeveloperName"] =  DeveloperName.text
+        self.object["appName"] = AppName.text
+        
+        self.object.saveEventually { (success, error) -> Void in
+            
+            if (error == nil) {
+                
+                
+                
+            }else {
+                
+                print(error)
+                
+            }
+            
+        }
+        
+        self.navigationController?.popToRootViewControllerAnimated(true)
     }
     
     //create a new entry object with the given parameters from the segue
@@ -54,7 +90,7 @@ class AcademicAppDetailsViewController: UITableViewController {
         if segue.identifier == "SaveAcademicApp" {
             newEntry = Entry(soc: soc, ac: true, well: well, app: true, label: (AcademicAppName.text!), url: (AcademicAppUrl.text!), tags: (AcademicAppTags.text!))
             
-            //HERE is where we push to the xml file or parse. Maybe not I'm not sure yet.
+            saveAction()
         }
     }
     
