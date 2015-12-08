@@ -115,7 +115,7 @@ class WellnessViewController: UITableViewController, UISearchResultsUpdating, UI
         
         let query: PFQuery = PFQuery(className: "Entry")
         
-        query.whereKey("wellness", equalTo: true)
+        //query.whereKey("wellness", equalTo: true)
         
         query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
             

@@ -120,7 +120,7 @@ class SocialViewController: UITableViewController, UISearchResultsUpdating, UISe
     
         let query: PFQuery = PFQuery(className: "Entry")
     
-        query.whereKey("Social", equalTo: true)
+        //query.whereKey("Social", equalTo: true)
     
         query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
     

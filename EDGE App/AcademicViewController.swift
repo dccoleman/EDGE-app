@@ -96,7 +96,7 @@ class AcademicViewController: UITableViewController, UISearchResultsUpdating, UI
         
         query.fromLocalDatastore()
         
-        query.whereKey("wellness", equalTo: true)
+        query.whereKey("academic", equalTo: true)
         
         query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
             
@@ -127,7 +127,7 @@ class AcademicViewController: UITableViewController, UISearchResultsUpdating, UI
         
         let query: PFQuery = PFQuery(className: "Entry")
         
-        query.whereKey("wellness", equalTo: true)
+        //query.whereKey("academic", equalTo: true)
         
         query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
             
