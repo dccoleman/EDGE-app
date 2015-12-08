@@ -63,7 +63,7 @@ class AcademicAppDetailsViewController: UITableViewController {
         
         // get correct URL from the selected table cell !!!
         // just go to google for now
-        var url  = NSURL(string: "http://www.google.com"); // Change the URL with your URL Scheme
+        let url  = NSURL(string: "http://www.google.com"); // Change the URL with your URL Scheme
         if UIApplication.sharedApplication().canOpenURL(url!) == true
         {
             UIApplication.sharedApplication().openURL(url!)

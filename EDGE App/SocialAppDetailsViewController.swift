@@ -9,6 +9,9 @@
 import UIKit
 
 class SocialAppDetailsViewController: UITableViewController {
+    
+    var object: PFObject!
+    
     var well = false
     var ac = false
     
@@ -47,6 +50,8 @@ class SocialAppDetailsViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.object = PFObject(className: "Entry")
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,6 +59,38 @@ class SocialAppDetailsViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func saveAction(sender: AnyObject) {
+        
+        print("Saving")
+        print("Saving \n")
+        print("Saving \n")
+        
+        self.object["Social"] = true
+        self.object["academic"] = self.ac
+        self.object["wellness"] = self.well
+        self.object["app"] = false
+        self.object["label"] = "Test"
+        self.object["url"] = "http//www.google.com"
+        self.object["tags"] = "lol"
+        self.object["DeveloperName"] = "Ryan Orlando"
+        self.object["appName"] = "Name"
+        
+        self.object.saveEventually { (success, error) -> Void in
+            
+            if (error == nil) {
+                
+                
+                
+            }else {
+                
+                print(error)
+                
+            }
+            
+        }
+        
+        self.navigationController?.popToRootViewControllerAnimated(true)
+    }
     //create a new entry object with the given parameters
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "SaveSocialApp" {

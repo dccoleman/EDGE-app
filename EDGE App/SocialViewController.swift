@@ -10,6 +10,8 @@ import UIKit
 
 class SocialViewController: UITableViewController, UISearchResultsUpdating, UISearchBarDelegate {
     
+    var entryObjects: NSMutableArray! = NSMutableArray()
+    
     var social:[Entry] = socialData
     var filteredSocial = [Entry]()
     var resultSearchController = UISearchController()
@@ -31,7 +33,111 @@ class SocialViewController: UITableViewController, UISearchResultsUpdating, UISe
             return controller
         })()
         
+        fetchAllObjectsFromLocalDatastore()
+        print("Fetching Objects")
+        fetchAllObjects()
+        
         self.tableView.reloadData()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated);
+        fetchAllObjectsFromLocalDatastore()
+        print("Fetching Objects")
+        fetchAllObjects()
+    }
+    
+    
+    
+    func updateData()
+    {
+        
+        //SHoudl clear some how but it is not working !!!
+        
+        var first: Bool = true;
+        for var index = 0; index < entryObjects.count; ++index
+        {
+            
+            let object: PFObject = self.entryObjects.objectAtIndex(index) as! PFObject
+            
+            let newEntry : Entry = Entry(soc: (object["Social"] as? Bool)!, ac: (object["academic"] as? Bool)!, well: (object["wellness"] as? Bool)!, app: (object["app"] as? Bool)!, label: object["label"] as? String,  url: object["url"] as? String, tags: object["tags"] as? String, devName: object["DeveloperName"] as? String, appName: object["appName"] as? String)
+            
+            if(first)
+            {
+                social = [newEntry]
+                first = false;
+            }
+            else
+            {
+                social.append(newEntry)
+            }
+            
+            
+            print("updating Data" + newEntry.label!)
+            
+            
+            
+        }
+        
+    }
+    
+    // Ryan Orlando
+    // Fetch all objects from the Local Database
+    func fetchAllObjectsFromLocalDatastore() {
+            
+        let query: PFQuery = PFQuery(className: "Entry")
+            
+        query.fromLocalDatastore()
+            
+        //query.whereKey("username", equalTo: PFUser.currentUser().username)
+            
+        query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
+                
+            if (error == nil) {
+                    
+                let temp: NSArray = objects! as NSArray
+                    
+                self.entryObjects = temp.mutableCopy() as! NSMutableArray
+                
+                self.updateData()
+                
+                self.tableView.reloadData()
+                
+                
+                    
+            }
+            else
+            {
+                print(error)
+            }
+        }
+
+    }
+    
+    func fetchAllObjects() {
+    
+        PFObject.unpinAllObjectsInBackgroundWithBlock(nil)
+    
+        let query: PFQuery = PFQuery(className: "Entry")
+    
+        //query.whereKey("username", equalTo: PFUser.currentUser().username)
+    
+        query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
+    
+            if (error == nil) {
+    
+                PFObject.pinAllInBackground(objects, block: nil)
+    
+                self.fetchAllObjectsFromLocalDatastore()
+    
+            }else {
+    
+                print(error)
+    
+            }
+    
+        }
+    
     }
     
     //This is the search function.
@@ -104,9 +210,9 @@ class SocialViewController: UITableViewController, UISearchResultsUpdating, UISe
         }
         
         
-        
-        cell.textLabel!.text = entry.label
-        cell.detailTextLabel!.text = entry.url
+        print("\t labeling" + entry.label!)
+        cell.textLabel!.text = entry.label!
+        cell.detailTextLabel!.text = entry.url!
         
         return cell
     }
@@ -151,6 +257,7 @@ class SocialViewController: UITableViewController, UISearchResultsUpdating, UISe
         
         if(!entry.app )
         {
+            
             // fix in refactor - get the data tbe directly in the cell
             let url = NSURL(string: (entry.url)!)
         
