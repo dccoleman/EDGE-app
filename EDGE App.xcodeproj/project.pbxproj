@@ -39,6 +39,7 @@
 		DECD3AF41C0A5DE8000A4A1F /* SocialAppDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD3AF31C0A5DE8000A4A1F /* SocialAppDetailsViewController.swift */; };
 		DECD3AF61C0A72FA000A4A1F /* WellnessAppDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD3AF51C0A72FA000A4A1F /* WellnessAppDetailsViewController.swift */; };
 		DEDBBE4C1C0A795300A594DE /* AcademicAppDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDBBE4B1C0A795300A594DE /* AcademicAppDetailsViewController.swift */; };
+		DEFAC6BE1C179C1600DDFA80 /* help.png in Resources */ = {isa = PBXBuildFile; fileRef = DEFAC6BD1C179C1600DDFA80 /* help.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		DECD3AF31C0A5DE8000A4A1F /* SocialAppDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialAppDetailsViewController.swift; sourceTree = "<group>"; };
 		DECD3AF51C0A72FA000A4A1F /* WellnessAppDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WellnessAppDetailsViewController.swift; sourceTree = "<group>"; };
 		DEDBBE4B1C0A795300A594DE /* AcademicAppDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcademicAppDetailsViewController.swift; sourceTree = "<group>"; };
+		DEFAC6BD1C179C1600DDFA80 /* help.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = help.png; path = Assets.xcassets/help.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +185,7 @@
 				DE94D59F1C0A264800E47C66 /* SocialViewController.swift */,
 				DE94D5A11C0A26F900E47C66 /* WellnessViewController.swift */,
 				DE1F94631BDFF58D00A0974E /* Main.storyboard */,
+				DEFAC6BD1C179C1600DDFA80 /* help.png */,
 				DECD3AF51C0A72FA000A4A1F /* WellnessAppDetailsViewController.swift */,
 				DECD3AF31C0A5DE8000A4A1F /* SocialAppDetailsViewController.swift */,
 				DE1F94661BDFF58D00A0974E /* Assets.xcassets */,
@@ -324,6 +327,7 @@
 				DE889B021BFCFBF600772A70 /* social2.png in Resources */,
 				DE1F94671BDFF58D00A0974E /* Assets.xcassets in Resources */,
 				DE1F94651BDFF58D00A0974E /* Main.storyboard in Resources */,
+				DEFAC6BE1C179C1600DDFA80 /* help.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
