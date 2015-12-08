@@ -230,4 +230,44 @@ class WellnessViewController: UITableViewController, UISearchResultsUpdating, UI
         }
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        //CODE TO BE RUN ON when the cell is clicked
+        
+        // get correct URL from the selected table cell !!! dont nedd cell only need data
+        //let cell = self.tableView.cellForRowAtIndexPath(indexPath)
+        
+        var entry : Entry
+        if resultSearchController.active {
+            entry = filteredWellness[indexPath.row]
+        } else {
+            entry = wellness[indexPath.row]
+        }
+        
+        if(!entry.app )
+        {
+            
+            // fix in refactor - get the data tbe directly in the cell
+            let url = NSURL(string: (entry.url)!)
+            
+            // Change the URL with your URL Scheme
+            if UIApplication.sharedApplication().canOpenURL(url!) == true
+            {
+                UIApplication.sharedApplication().openURL(url!)
+            }
+        }
+        else
+        {
+            
+            let url = NSURL(string: ("http://itunes.com/apps/"+entry.developerName!+"/"+entry.appName!))
+            
+            //!!! open in store
+            // Change the URL with your URL Scheme
+            if UIApplication.sharedApplication().canOpenURL(url!) == true
+            {
+                UIApplication.sharedApplication().openURL(url!)
+            }
+            
+        }
+    }
+    
 }
