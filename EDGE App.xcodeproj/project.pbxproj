@@ -30,6 +30,7 @@
 		DE1F94751BDFF58D00A0974E /* EDGE_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1F94741BDFF58D00A0974E /* EDGE_AppTests.swift */; };
 		DE1F94801BDFF58D00A0974E /* EDGE_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1F947F1BDFF58D00A0974E /* EDGE_AppUITests.swift */; };
 		DE52C7791BE7CBBE002ACCD8 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE52C7781BE7CBBE002ACCD8 /* Entry.swift */; };
+		DE6E5FB91C179EEB005FE82B /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DE6E5FB81C179EEB005FE82B /* logo.png */; };
 		DE889B011BFCFBF600772A70 /* academic2.png in Resources */ = {isa = PBXBuildFile; fileRef = DE889AFE1BFCFBF600772A70 /* academic2.png */; };
 		DE889B021BFCFBF600772A70 /* social2.png in Resources */ = {isa = PBXBuildFile; fileRef = DE889AFF1BFCFBF600772A70 /* social2.png */; };
 		DE889B031BFCFBF600772A70 /* wellness2.png in Resources */ = {isa = PBXBuildFile; fileRef = DE889B001BFCFBF600772A70 /* wellness2.png */; };
@@ -90,6 +91,7 @@
 		DE1F947F1BDFF58D00A0974E /* EDGE_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EDGE_AppUITests.swift; sourceTree = "<group>"; };
 		DE1F94811BDFF58D00A0974E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE52C7781BE7CBBE002ACCD8 /* Entry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		DE6E5FB81C179EEB005FE82B /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = Assets.xcassets/logo.png; sourceTree = "<group>"; };
 		DE889AFE1BFCFBF600772A70 /* academic2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = academic2.png; path = Assets.xcassets/academic2.png; sourceTree = "<group>"; };
 		DE889AFF1BFCFBF600772A70 /* social2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = social2.png; path = Assets.xcassets/social2.png; sourceTree = "<group>"; };
 		DE889B001BFCFBF600772A70 /* wellness2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wellness2.png; path = Assets.xcassets/wellness2.png; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 				DECD3AF31C0A5DE8000A4A1F /* SocialAppDetailsViewController.swift */,
 				DE1F94661BDFF58D00A0974E /* Assets.xcassets */,
 				DE1F94681BDFF58D00A0974E /* LaunchScreen.storyboard */,
+				DE6E5FB81C179EEB005FE82B /* logo.png */,
 				DE889AFE1BFCFBF600772A70 /* academic2.png */,
 				DE889AFF1BFCFBF600772A70 /* social2.png */,
 				DE889B001BFCFBF600772A70 /* wellness2.png */,
@@ -325,6 +328,7 @@
 				DE1F946A1BDFF58D00A0974E /* LaunchScreen.storyboard in Resources */,
 				DE889B031BFCFBF600772A70 /* wellness2.png in Resources */,
 				DE889B021BFCFBF600772A70 /* social2.png in Resources */,
+				DE6E5FB91C179EEB005FE82B /* logo.png in Resources */,
 				DE1F94671BDFF58D00A0974E /* Assets.xcassets in Resources */,
 				DE1F94651BDFF58D00A0974E /* Main.storyboard in Resources */,
 				DEFAC6BE1C179C1600DDFA80 /* help.png in Resources */,
