@@ -2,8 +2,9 @@
 //  MyUITabViewCell.swift
 //  EDGE App
 //
-//  Created by Ryan Orlando on 12/1/15.
+//  Created by Ryan Orlando and Devon Colman on 12/1/15.
 //  Copyright © 2015 EDGE IQP Team. All rights reserved.
+//  This is the custom UITable View If we ever need one not used as of yet
 //
 
 import Foundation

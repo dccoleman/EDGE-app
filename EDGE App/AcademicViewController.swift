@@ -50,6 +50,7 @@ class AcademicViewController: UITableViewController, UISearchResultsUpdating, UI
         self.tableView.reloadData()
     }
     
+    //calls when the view appears
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated);
         fetchAllObjectsFromLocalDatastore()
@@ -57,6 +58,7 @@ class AcademicViewController: UITableViewController, UISearchResultsUpdating, UI
         fetchAllObjects()
     }
     
+    ///updats the Entrty data to sycn it witht ther data being held in the local Database
     func updateData()
     {
         var first: Bool = true;
@@ -86,8 +88,7 @@ class AcademicViewController: UITableViewController, UISearchResultsUpdating, UI
         
     }
     
-    // Ryan Orlando
-    // Fetch all objects from the Local Database
+    /// Fetch all objects from the Local Database
     func fetchAllObjectsFromLocalDatastore() {
         
         let query: PFQuery = PFQuery(className: "Entry")
@@ -119,6 +120,7 @@ class AcademicViewController: UITableViewController, UISearchResultsUpdating, UI
         
     }
     
+    ///fetchs all objects from the severs datbase
     func fetchAllObjects() {
         
         PFObject.unpinAllObjectsInBackgroundWithBlock(nil)

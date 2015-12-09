@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  EDGE App
 //
-//  Created by Devon Coleman on 10/27/15.
+//  Created by Ryan Orlando and Devon Colman on 10/27/15.
 //  Copyright © 2015 EDGE IQP Team. All rights reserved.
 //
 

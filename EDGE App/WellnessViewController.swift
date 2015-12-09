@@ -53,6 +53,7 @@ class WellnessViewController: UITableViewController, UISearchResultsUpdating, UI
         fetchAllObjects()
     }
     
+    ///updats the Entrty data to sycn it witht ther data being held in the local Database
     func updateData()
     {
         
@@ -85,8 +86,7 @@ class WellnessViewController: UITableViewController, UISearchResultsUpdating, UI
         
     }
     
-    // Ryan Orlando
-    // Fetch all objects from the Local Database
+    /// Fetch all objects from the Local Database
     func fetchAllObjectsFromLocalDatastore() {
         
         let query: PFQuery = PFQuery(className: "Entry")
@@ -118,6 +118,7 @@ class WellnessViewController: UITableViewController, UISearchResultsUpdating, UI
         
     }
     
+    ///fetchs all objects from the severs datbase
     func fetchAllObjects() {
         
         PFObject.unpinAllObjectsInBackgroundWithBlock(nil)

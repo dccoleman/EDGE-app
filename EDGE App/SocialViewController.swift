@@ -54,7 +54,7 @@ class SocialViewController: UITableViewController, UISearchResultsUpdating, UISe
     }
     
     
-    
+    ///updats the Entrty data to sycn it witht ther data being held in the local Database
     func updateData()
     {
         
@@ -87,8 +87,7 @@ class SocialViewController: UITableViewController, UISearchResultsUpdating, UISe
         
     }
     
-    // Ryan Orlando
-    // Fetch all objects from the Local Database
+    /// Fetch all objects from the Local Database
     func fetchAllObjectsFromLocalDatastore() {
             
         let query: PFQuery = PFQuery(className: "Entry")
@@ -120,6 +119,7 @@ class SocialViewController: UITableViewController, UISearchResultsUpdating, UISe
 
     }
     
+    ///fetchs all objects from the severs datbase
     func fetchAllObjects() {
     
         PFObject.unpinAllObjectsInBackgroundWithBlock(nil)
