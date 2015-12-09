@@ -73,12 +73,17 @@ class Entry {
         self.appName = appName
     }
     
-    //searches the tags
+    ///This function searches the tags of the entry
+    /// - parameters:
+    ///   - searchString: The string to compare against the tags
+    /// - returns: A boolean indicating whether the string was found
     func search(searchString: String) -> Bool {
         return (tags?.lowercaseString.rangeOfString(searchString.lowercaseString) != nil)
     }
     
-    //adds a tag if necessary
+    ///Adds a tag to the given entry
+    /// - parameters:
+    ///   - tag: The tag to add to the list
     func addTag(tag : String) {
         tags?.appendContentsOf(tag)
     }
