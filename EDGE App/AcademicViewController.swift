@@ -219,12 +219,12 @@ class AcademicViewController: UITableViewController, UISearchResultsUpdating, UI
             
             //add the new entry to the academic array
             if let entry = AcademicAppDetailsViewController.newEntry {
-                academic.append(entry)
+                //academic.append(entry)
                 print(entry.label!)
                 
                 //update the tableView
-                let indexPath = NSIndexPath(forRow: academic.count-1, inSection: 0)
-                tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+                //let indexPath = NSIndexPath(forRow: academic.count-1, inSection: 0)
+                //tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
             }
         }
     }

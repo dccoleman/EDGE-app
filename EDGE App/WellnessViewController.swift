@@ -229,12 +229,12 @@ class WellnessViewController: UITableViewController, UISearchResultsUpdating, UI
             
             //add the new player to the players array
             if let entry = WellnessAppDetailsViewController.newEntry {
-                wellness.append(entry)
+                //wellness.append(entry)
                 //SocialViewController.social.append(entry)
                 
                 //update the tableView
-                let indexPath = NSIndexPath(forRow: wellness.count-1, inSection: 0)
-                tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+                //let indexPath = NSIndexPath(forRow: wellness.count-1, inSection: 0)
+                //tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
             }
         }
     }

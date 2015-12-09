@@ -9,19 +9,13 @@
 import Foundation
 
 let socialData = [
-    Entry(label: "Test1", url: "https://www.google.com"),
-    Entry(label: "Football Games", url: "travelbrand://"),
-    Entry(label: "Library Hours", url: "twitter://")
+    Entry(label: "Loading...", url:"")
 ]
 
 let wellnessData = [
-    Entry(label: "Gym Hours", url: "www.gym.com"),
-    Entry(label: "Calorie Counter", url: "www.counter.com"),
-    Entry(label: "Health Meter", url: "www.meter.com")
+    Entry(label: "Loading...", url:"")
 ]
 
 let academicData = [
-    Entry(label: "Books", url: "www.amazon.com"),
-    Entry(label: "Online Resources", url: "www.google.com"),
-    Entry(label: "Stats", url: "www.stats.com")
+    Entry(label: "Loading...", url:"")
 ]

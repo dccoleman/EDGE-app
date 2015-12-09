@@ -51,6 +51,7 @@ class AcademicAppDetailsViewController: UITableViewController {
     }
     
     @IBAction func saveAction() {
+        if(!((newEntry!.label!.isEmpty == true) || (newEntry!.url!.isEmpty == true))) {
         
         print("Saving")
         print("Saving \n")
@@ -81,6 +82,7 @@ class AcademicAppDetailsViewController: UITableViewController {
         }
         
         self.navigationController?.popToRootViewControllerAnimated(true)
+    }
     }
     
     //create a new entry object with the given parameters from the segue

@@ -53,6 +53,7 @@ class SocialAppDetailsViewController: UITableViewController {
     }
     
     @IBAction func saveAction() {
+        if(!((newEntry!.label!.isEmpty == true) || (newEntry!.url!.isEmpty == true))) {
         
         print("Saving")
         print("Saving \n")
@@ -78,6 +79,8 @@ class SocialAppDetailsViewController: UITableViewController {
         }
         self.navigationController?.popToRootViewControllerAnimated(true)
     }
+    }
+    
     //create a new entry object with the given parameters
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "SaveSocialApp" {

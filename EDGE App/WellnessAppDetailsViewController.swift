@@ -49,6 +49,7 @@ class WellnessAppDetailsViewController: UITableViewController {
     }
     
     @IBAction func saveAction() {
+        if(!((newEntry!.label!.isEmpty == true) || (newEntry!.url!.isEmpty == true))) {
         
         print("Saving")
         print("Saving \n")
@@ -79,6 +80,7 @@ class WellnessAppDetailsViewController: UITableViewController {
         }
         
         self.navigationController?.popToRootViewControllerAnimated(true)
+    }
     }
     
     //create a new entry object with the given parameters

@@ -231,11 +231,11 @@ class SocialViewController: UITableViewController, UISearchResultsUpdating, UISe
             
             //add the new player to the players array
             if let entry = SocialAppDetailsViewController.newEntry {
-                social.append(entry)
+                //social.append(entry)
                 
                 //update the tableView
-                let indexPath = NSIndexPath(forRow: social.count-1, inSection: 0)
-                tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+                //let indexPath = NSIndexPath(forRow: social.count-1, inSection: 0)
+                //tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
             }
         }
     }
