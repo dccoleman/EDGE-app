@@ -9,49 +9,43 @@
 import UIKit
 
 class WellnessAppDetailsViewController: UITableViewController {
-    
+    //the new entry object and pfobject for parse
     var newEntry:Entry?
     var object: PFObject!
     
+    //all the text fields and buttons on the add screen
     @IBOutlet weak var WellnessAppName: UITextField!
     @IBOutlet weak var WellnessAppUrl: UITextField!
     @IBOutlet weak var WellnessAppTags: UITextField!
     @IBOutlet weak var AppName: UITextField!
     @IBOutlet weak var DeveloperName: UITextField!
     
+    //the booleans that get flipflopped based on the state of the switches
     var soc = false
     var ac = false
     
+    //The functions that flip the booleans
     @IBAction func SocialUpdated(sender: UISwitch) {
         if soc {
             soc = false
-            print("Social Off")
         }
         else {
             soc = true
-            print("Social On")
         }
     }
     
     @IBAction func AcademicUpdated(sender: UISwitch) {
         if ac {
             ac = false
-            print("Academic Off")
         }
         else {
             ac = true
-            print("Academic On")
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.object = PFObject(className: "Entry")
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func saveAction() {

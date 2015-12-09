@@ -141,16 +141,13 @@ class SocialViewController: UITableViewController, UISearchResultsUpdating, UISe
                 print(error)
     
             }
-    
         }
-    
     }
     
     //This is the search function.
     //Returns true if the current cell fits the criteria.
     //The tag search is held within the entry class but the rest of the search
     //(label, url, etc) is held here
-    
     func filterContentForSearchText(searchText: String) {
         self.filteredSocial = self.social.filter({( newApp: Entry ) -> Bool in
             let stringMatch = newApp.label!.lowercaseString.rangeOfString(searchText.lowercaseString)
@@ -158,11 +155,6 @@ class SocialViewController: UITableViewController, UISearchResultsUpdating, UISe
             let tagMatch = newApp.search(searchText)
             return tagMatch || (stringMatch != nil) || (urlMatch != nil) || searchText.isEmpty
         })
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     //Detects when search is active and prepares the table view accordingly
@@ -188,12 +180,12 @@ class SocialViewController: UITableViewController, UISearchResultsUpdating, UISe
         }
     }
     
-    
-    
+    //returns the amount of spaces one cell will take up
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
+    //returns the correct number of entries depending on which list is active
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if (self.resultSearchController.active) {
             return self.filteredSocial.count
@@ -201,9 +193,6 @@ class SocialViewController: UITableViewController, UISearchResultsUpdating, UISe
             return self.social.count
         }
     }
-    
-    
-    
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCellWithIdentifier("SocialCell", forIndexPath: indexPath)
@@ -224,6 +213,7 @@ class SocialViewController: UITableViewController, UISearchResultsUpdating, UISe
         return cell
     }
     
+    //update the view for the active search
     func updateSearchResultsForSearchController(searchController: UISearchController) {
         filteredSocial.removeAll(keepCapacity: false)
         filterContentForSearchText(searchController.searchBar.text!)
@@ -231,9 +221,11 @@ class SocialViewController: UITableViewController, UISearchResultsUpdating, UISe
         tableView.reloadData()
     }
     
+    //the cancel segue, no action needs to be taken here.
     @IBAction func cancelToSocialAppViewController(segue:UIStoryboardSegue) {
     }
     
+    //the save segue, updates the list
     @IBAction func saveSocialApp(segue:UIStoryboardSegue) {
         if let SocialAppDetailsViewController = segue.sourceViewController as? SocialAppDetailsViewController {
             

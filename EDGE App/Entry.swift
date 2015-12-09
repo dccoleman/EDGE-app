@@ -29,10 +29,11 @@ class Entry {
     //array of other tags, used for search
     var tags : String?
     
+    //the developer and application name for formatting the url
     var developerName : String?
-    
     var appName : String?
     
+    //the initializer
     init(label : String?, url :String? )
     {
         self.social = false
@@ -46,6 +47,7 @@ class Entry {
 
     }
     
+    //the other initializer
     init(soc: Bool, ac: Bool , well: Bool, app: Bool, label : String?, url :String?, tags : String?)
     {
         social = soc
@@ -57,6 +59,7 @@ class Entry {
         self.tags = tags
     }
     
+    //the third initializer
     init(soc: Bool, ac: Bool , well: Bool, app: Bool, label : String?, url :String?, tags : String?, devName : String?, appName : String?)
     {
         social = soc
@@ -70,10 +73,12 @@ class Entry {
         self.appName = appName
     }
     
+    //searches the tags
     func search(searchString: String) -> Bool {
         return (tags?.lowercaseString.rangeOfString(searchString.lowercaseString) != nil)
     }
     
+    //adds a tag if necessary
     func addTag(tag : String) {
         tags?.appendContentsOf(tag)
     }

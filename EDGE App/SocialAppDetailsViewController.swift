@@ -10,36 +10,11 @@ import UIKit
 
 class SocialAppDetailsViewController: UITableViewController {
     
+    //the new entry and pfobject for parse
+    var newEntry:Entry?
     var object: PFObject!
     
-    var well = false
-    var ac = false
-    
-    var newEntry:Entry?
-
-    @IBAction func WellnessUpdated(sender: UISwitch) {
-        if well {
-            well = false
-            print("Wellness Off")
-        }
-        else {
-            well = true
-            print("Wellness On")
-        }
-    }
-    
-    @IBAction func AcademicUpdated(sender: UISwitch) {
-        if ac {
-            ac = false
-            print("Academic Off")
-        }
-        else {
-            ac = true
-            print("Academic On")
-        }
-    }
-    
-    
+    //IBOutlets for each text field and switch
     @IBOutlet weak var SocialAppName: UITextField!
     @IBOutlet weak var SocialAppUrlField: UITextField!
     @IBOutlet weak var SocialAppTags: UITextField!
@@ -48,15 +23,33 @@ class SocialAppDetailsViewController: UITableViewController {
     @IBOutlet weak var AppName: UITextField!
     @IBOutlet weak var DeveloperName: UITextField!
     
+    //The variables that are flipped whenever the state of the switch is swapped
+    var well = false
+    var ac = false
+
+    //the actual functions that do the flipping
+    @IBAction func WellnessUpdated(sender: UISwitch) {
+        if well {
+            well = false
+        }
+        else {
+            well = true
+        }
+    }
+    
+    @IBAction func AcademicUpdated(sender: UISwitch) {
+        if ac {
+            ac = false
+        }
+        else {
+            ac = true
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.object = PFObject(className: "Entry")
         
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func saveAction() {
@@ -78,17 +71,11 @@ class SocialAppDetailsViewController: UITableViewController {
         self.object.saveEventually { (success, error) -> Void in
             
             if (error == nil) {
-                
-                
-                
+                //y u do dis
             }else {
-                
                 print(error)
-                
             }
-            
         }
-        
         self.navigationController?.popToRootViewControllerAnimated(true)
     }
     //create a new entry object with the given parameters

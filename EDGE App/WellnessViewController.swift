@@ -20,13 +20,16 @@ class WellnessViewController: UITableViewController, UISearchResultsUpdating, UI
     
     //the Results Search Controller
     var resultSearchController = UISearchController()
-    var selectedScope = "All"
     
+    //sets up the search controller and view once it's loaded
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //makes the view take prescedence when swapped to, fixes
+        //black screens when searching and changing tabs
         self.definesPresentationContext = true
         
+        //the results controller
         self.resultSearchController = ({
             let controller = UISearchController(searchResultsController: nil)
             controller.searchResultsUpdater = self
@@ -39,6 +42,7 @@ class WellnessViewController: UITableViewController, UISearchResultsUpdating, UI
             return controller
         })()
         
+        //refresh the tableview
         self.tableView.reloadData()
     }
     
@@ -153,11 +157,7 @@ class WellnessViewController: UITableViewController, UISearchResultsUpdating, UI
         })
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+    //Detects when search is active and prepares the table view accordingly
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "DetailSegue" {
             let controller = segue.destinationViewController
@@ -165,6 +165,7 @@ class WellnessViewController: UITableViewController, UISearchResultsUpdating, UI
             
             if let indexPath = tableView.indexPathForCell(sender as! UITableViewCell) {
                 
+                //if search is active
                 if resultSearchController.active {
                     entry = filteredWellness[indexPath.row]
                 } else {
@@ -180,11 +181,12 @@ class WellnessViewController: UITableViewController, UISearchResultsUpdating, UI
         }
     }
     
-    
+    //return the number of sections one cell will take up
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
+    //return the correct number of cells depending on which list is active
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if (self.resultSearchController.active) {
             return self.filteredWellness.count
@@ -193,7 +195,7 @@ class WellnessViewController: UITableViewController, UISearchResultsUpdating, UI
         }
     }
     
-    
+    //populate the table based on the active list
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCellWithIdentifier("WellnessCell", forIndexPath: indexPath)
         
@@ -210,6 +212,7 @@ class WellnessViewController: UITableViewController, UISearchResultsUpdating, UI
         return cell
     }
     
+    //actually update and do the search
     func updateSearchResultsForSearchController(searchController: UISearchController) {
         filteredWellness.removeAll(keepCapacity: false)
         filterContentForSearchText(searchController.searchBar.text!)

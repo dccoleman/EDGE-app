@@ -9,7 +9,7 @@
 import Foundation
 
 let socialData = [
-    Entry(label: "Parties", url: "https://www.google.com"),
+    Entry(label: "Test1", url: "https://www.google.com"),
     Entry(label: "Football Games", url: "travelbrand://"),
     Entry(label: "Library Hours", url: "twitter://")
 ]
