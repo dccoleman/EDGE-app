@@ -12,8 +12,13 @@ class WellnessViewController: UITableViewController, UISearchResultsUpdating, UI
     
     var entryObjects: NSMutableArray! = NSMutableArray()
     
+    //the array of wellness entries
     var wellness:[Entry] = wellnessData
+    
+    //the filtered (searched) array
     var filteredWellness = [Entry]()
+    
+    //the Results Search Controller
     var resultSearchController = UISearchController()
     var selectedScope = "All"
     

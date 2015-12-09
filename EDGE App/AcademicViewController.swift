@@ -13,6 +13,7 @@ class AcademicViewController: UITableViewController, UISearchResultsUpdating, UI
     //The list of entries. Sourced from parse
     var academic:[Entry] = academicData
     
+    //Parse object list of entries
     var entryObjects: NSMutableArray! = NSMutableArray()
     
     //The filtered (searched) list
@@ -27,7 +28,7 @@ class AcademicViewController: UITableViewController, UISearchResultsUpdating, UI
         super.viewDidLoad()
         
         //causes the search results to override whenever the view
-        //comes into focus. fixes black screens when tabbing back
+        //comes into focus. Fixes black screens when tabbing back
         //to a previous search
         self.definesPresentationContext = true
         
@@ -58,9 +59,6 @@ class AcademicViewController: UITableViewController, UISearchResultsUpdating, UI
     
     func updateData()
     {
-        
-        //SHoudl clear some how but it is not working !!!
-        
         var first: Bool = true;
         for var index = 0; index < entryObjects.count; ++index
         {

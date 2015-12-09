@@ -229,11 +229,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EDGE App/AcademicViewController.swift"
-            timestampString = "470451336.76283"
+            timestampString = "471364591.131003"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
             landmarkName = "AcademicViewController"
             landmarkType = "3">
          </BreakpointContent>

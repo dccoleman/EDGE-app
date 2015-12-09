@@ -12,10 +12,16 @@ class SocialViewController: UITableViewController, UISearchResultsUpdating, UISe
     
     var entryObjects: NSMutableArray! = NSMutableArray()
     
+    //the array of social entries
     var social:[Entry] = socialData
+    
+    //the filtered array, for search
     var filteredSocial = [Entry]()
+    
+    //the results search controller
     var resultSearchController = UISearchController()
     
+    //sets up the search controller and view once it's loaded
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -159,6 +165,7 @@ class SocialViewController: UITableViewController, UISearchResultsUpdating, UISe
         // Dispose of any resources that can be recreated.
     }
     
+    //Detects when search is active and prepares the table view accordingly
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "DetailSegue" {
             let controller = segue.destinationViewController

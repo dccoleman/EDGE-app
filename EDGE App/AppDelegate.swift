@@ -34,25 +34,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
-    func applicationWillResignActive(application: UIApplication) {
-        //No need for this method
-    }
-
-    func applicationDidEnterBackground(application: UIApplication) {
-        //Once again no need
-    }
-
-    func applicationWillEnterForeground(application: UIApplication) {
-        //Ditto
-    }
-
-    func applicationDidBecomeActive(application: UIApplication) {
-        //"  "
-    }
-
-    func applicationWillTerminate(application: UIApplication) {
-        //We'll use this to push the current, updated list to parse
-    }
 
 
 }

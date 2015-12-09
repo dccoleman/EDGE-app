@@ -10,6 +10,7 @@ import UIKit
 
 class AcademicAppDetailsViewController: UITableViewController {
     
+    //booleans that are set depending on the state of the swtiches
     var soc = false
     var well = false
     
@@ -19,12 +20,14 @@ class AcademicAppDetailsViewController: UITableViewController {
     @IBOutlet weak var AcademicAppName: UITextField!
     @IBOutlet weak var AcademicAppUrl: UITextField!
     @IBOutlet weak var AcademicAppTags: UITextField!
+    @IBOutlet weak var DeveloperName: UITextField!
+    @IBOutlet weak var AppName: UITextField!
     
     //A variable to keep the new entry
     var newEntry:Entry?
 
-    @IBOutlet weak var DeveloperName: UITextField!
-    @IBOutlet weak var AppName: UITextField!
+    //IBActions that are triggered whenever a switch is hit, toggling the booleans
+    //these are used to set the field within the entry so it is put in multiple lists if necessary
     @IBAction func SocialUpdated(sender: UISwitch) {
         if soc {
             soc = false
@@ -33,7 +36,6 @@ class AcademicAppDetailsViewController: UITableViewController {
             soc = true
         }
     }
-    
     @IBAction func WellnessUpdated(sender: UISwitch) {
         if well {
             well = false
@@ -46,10 +48,6 @@ class AcademicAppDetailsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.object = PFObject(className: "Entry")
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
     
     @IBAction func saveAction() {
@@ -93,17 +91,4 @@ class AcademicAppDetailsViewController: UITableViewController {
             saveAction()
         }
     }
-    
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        //CODE TO BE RUN ON when the cell is clicked
-        
-        // get correct URL from the selected table cell !!!
-        // just go to google for now
-        let url  = NSURL(string: "http://www.google.com"); // Change the URL with your URL Scheme
-        if UIApplication.sharedApplication().canOpenURL(url!) == true
-        {
-            UIApplication.sharedApplication().openURL(url!)
-        }
-    }
-    
 }
