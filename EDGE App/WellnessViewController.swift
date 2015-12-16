@@ -226,16 +226,16 @@ class WellnessViewController: UITableViewController, UISearchResultsUpdating, UI
     
     @IBAction func saveWellnessApp(segue:UIStoryboardSegue) {
         if let WellnessAppDetailsViewController = segue.sourceViewController as? WellnessAppDetailsViewController {
-            
+            //old code, now all syncing is done with the internet database so we don't need this anymore
             //add the new player to the players array
-            if let entry = WellnessAppDetailsViewController.newEntry {
+            //if let entry = WellnessAppDetailsViewController.newEntry {
                 //wellness.append(entry)
                 //SocialViewController.social.append(entry)
                 
                 //update the tableView
                 //let indexPath = NSIndexPath(forRow: wellness.count-1, inSection: 0)
                 //tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
-            }
+            //}
         }
     }
     
